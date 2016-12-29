@@ -1,0 +1,170 @@
+object NDuvOS: TNDuvOS
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 319
+  ClientWidth = 640
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object LtCont: TLayout
+    Align = Client
+    Size.Width = 640.000000000000000000
+    Size.Height = 319.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object PnlDad: TPanel
+      Align = Client
+      Size.Width = 640.000000000000000000
+      Size.Height = 267.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      object LtDad: TLayout
+        Align = Client
+        Size.Width = 640.000000000000000000
+        Size.Height = 267.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        object EdtSolic: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          TabOrder = 0
+          Position.X = 64.000000000000000000
+          Position.Y = 76.000000000000000000
+          Size.Width = 558.000000000000000000
+          Size.Height = 22.000000000000000000
+          Size.PlatformDefault = False
+          object LbDuv: TLabel
+            Position.X = -51.000000000000000000
+            Position.Y = 5.000000000000000000
+            Size.Width = 52.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            Text = 'D'#250'vida:'
+          end
+        end
+        object EdtCli: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          TabOrder = 1
+          Position.X = 62.000000000000000000
+          Position.Y = 26.000000000000000000
+          Size.Width = 289.000000000000000000
+          Size.Height = 22.000000000000000000
+          Size.PlatformDefault = False
+          object LbCli: TLabel
+            Position.X = -50.000000000000000000
+            Position.Y = 5.000000000000000000
+            Size.Width = 46.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            Text = 'Cliente:'
+          end
+        end
+        object MmDiag: TMemo
+          Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+          DataDetectorTypes = []
+          Position.X = 13.000000000000000000
+          Position.Y = 146.000000000000000000
+          Size.Width = 609.000000000000000000
+          Size.Height = 88.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 2
+          Viewport.Width = 605.000000000000000000
+          Viewport.Height = 84.000000000000000000
+        end
+        object BtnBusc: TButton
+          Position.X = 360.000000000000000000
+          Position.Y = 27.000000000000000000
+          TabOrder = 3
+          Text = 'Buscar'
+        end
+        object LbResp: TLabel
+          Position.X = 12.000000000000000000
+          Position.Y = 122.000000000000000000
+          Size.Width = 73.000000000000000000
+          Size.Height = 17.000000000000000000
+          Size.PlatformDefault = False
+          Text = 'Resposta:'
+        end
+      end
+    end
+    object PnlMenu: TPanel
+      Align = Bottom
+      Position.Y = 267.000000000000000000
+      Size.Width = 640.000000000000000000
+      Size.Height = 52.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      object BtnCanc: TButton
+        Align = Left
+        Margins.Left = 5.000000000000000000
+        Margins.Top = 5.000000000000000000
+        Margins.Right = 5.000000000000000000
+        Margins.Bottom = 5.000000000000000000
+        Position.X = 5.000000000000000000
+        Position.Y = 5.000000000000000000
+        Size.Width = 80.000000000000000000
+        Size.Height = 42.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 4
+        Text = 'Cancelar'
+      end
+      object BtnGra: TButton
+        Align = Right
+        Margins.Left = 5.000000000000000000
+        Margins.Top = 5.000000000000000000
+        Margins.Right = 5.000000000000000000
+        Margins.Bottom = 5.000000000000000000
+        Position.X = 555.000000000000000000
+        Position.Y = 5.000000000000000000
+        Size.Width = 80.000000000000000000
+        Size.Height = 42.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        Text = 'Gravar'
+      end
+      object BtnFinal: TButton
+        Align = Right
+        Margins.Left = 5.000000000000000000
+        Margins.Top = 5.000000000000000000
+        Margins.Right = 5.000000000000000000
+        Margins.Bottom = 5.000000000000000000
+        Position.X = 372.000000000000000000
+        Position.Y = 5.000000000000000000
+        Size.Width = 80.000000000000000000
+        Size.Height = 42.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        Text = 'Finalizar'
+      end
+      object BtnHist: TButton
+        Align = Right
+        Margins.Left = 5.000000000000000000
+        Margins.Top = 5.000000000000000000
+        Margins.Right = 5.000000000000000000
+        Margins.Bottom = 5.000000000000000000
+        Position.X = 282.000000000000000000
+        Position.Y = 5.000000000000000000
+        Size.Width = 80.000000000000000000
+        Size.Height = 42.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 2
+        Text = 'Hist'#243'rico'
+      end
+      object BtnEnca: TButton
+        Align = Right
+        Margins.Left = 5.000000000000000000
+        Margins.Top = 5.000000000000000000
+        Margins.Right = 5.000000000000000000
+        Margins.Bottom = 5.000000000000000000
+        Position.X = 462.000000000000000000
+        Position.Y = 5.000000000000000000
+        Size.Width = 83.000000000000000000
+        Size.Height = 42.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 3
+        Text = 'Encaminhar '
+      end
+    end
+  end
+end

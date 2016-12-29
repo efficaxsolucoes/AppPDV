@@ -1,0 +1,249 @@
+object CadUser: TCadUser
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 390
+  ClientWidth = 679
+  Position = MainFormCenter
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object PnlDadFunc: TPanel
+    Align = Client
+    Size.Width = 679.000000000000000000
+    Size.Height = 341.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object ListView1: TListView
+      ItemAppearanceClassName = 'TListItemAppearance'
+      ItemEditAppearanceClassName = 'TListItemShowCheckAppearance'
+      HeaderAppearanceClassName = 'TListHeaderObjects'
+      FooterAppearanceClassName = 'TListHeaderObjects'
+      Align = Client
+      Margins.Left = 5.000000000000000000
+      Margins.Top = 5.000000000000000000
+      Margins.Right = 5.000000000000000000
+      Margins.Bottom = 5.000000000000000000
+      Size.Width = 265.000000000000000000
+      Size.Height = 331.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+    end
+    object GbDadosUser: TGroupBox
+      Align = Right
+      Margins.Left = 5.000000000000000000
+      Margins.Top = 5.000000000000000000
+      Margins.Right = 5.000000000000000000
+      Margins.Bottom = 5.000000000000000000
+      Position.X = 280.000000000000000000
+      Position.Y = 5.000000000000000000
+      Size.Width = 394.000000000000000000
+      Size.Height = 331.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Dados do Usu'#225'rio'
+      TabOrder = 2
+      object EdtNome: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        TabOrder = 0
+        Position.X = 28.000000000000000000
+        Position.Y = 40.000000000000000000
+        Size.Width = 349.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        object LbNome: TLabel
+          Position.X = -1.000000000000000000
+          Position.Y = -19.000000000000000000
+          Size.Width = 49.000000000000000000
+          Size.Height = 17.000000000000000000
+          Size.PlatformDefault = False
+          Text = 'Nome:'
+        end
+      end
+      object EdtTec: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        TabOrder = 1
+        Position.X = 198.000000000000000000
+        Position.Y = 99.000000000000000000
+        Size.Width = 179.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        object LbTec: TLabel
+          Position.Y = -19.000000000000000000
+          Size.Width = 46.000000000000000000
+          Size.Height = 17.000000000000000000
+          Size.PlatformDefault = False
+          Text = 'T'#233'cnico:'
+        end
+      end
+      object EdtEdtFunc: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        TabOrder = 2
+        Position.X = 26.000000000000000000
+        Position.Y = 97.000000000000000000
+        Size.Width = 143.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        object LbFunc: TLabel
+          Position.Y = -23.000000000000000000
+          Size.Width = 47.000000000000000000
+          Size.Height = 17.000000000000000000
+          Size.PlatformDefault = False
+          Text = 'Fun'#231#227'o:'
+        end
+      end
+      object GBAcess: TGroupBox
+        Align = Bottom
+        Margins.Left = 7.000000000000000000
+        Margins.Top = 5.000000000000000000
+        Margins.Right = 7.000000000000000000
+        Margins.Bottom = 7.000000000000000000
+        Position.X = 7.000000000000000000
+        Position.Y = 141.000000000000000000
+        Size.Width = 380.000000000000000000
+        Size.Height = 183.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'Acesso'
+        TabOrder = 3
+        object EdtSen: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          TabOrder = 3
+          Position.X = 19.000000000000000000
+          Position.Y = 140.000000000000000000
+          Size.Width = 137.000000000000000000
+          Size.Height = 22.000000000000000000
+          Size.PlatformDefault = False
+          object LbSen: TLabel
+            Position.X = -1.000000000000000000
+            Position.Y = -22.000000000000000000
+            Size.Width = 46.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            Text = 'Senha:'
+          end
+        end
+        object CbAtiv: TCheckBox
+          Position.X = 19.000000000000000000
+          Position.Y = 30.000000000000000000
+          Size.Width = 62.000000000000000000
+          Size.Height = 19.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 4
+          Text = 'Ativo'
+        end
+        object EdtConfSen: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          TabOrder = 1
+          Position.X = 211.000000000000000000
+          Position.Y = 140.000000000000000000
+          Size.Width = 137.000000000000000000
+          Size.Height = 22.000000000000000000
+          Size.PlatformDefault = False
+          object Label1: TLabel
+            Position.X = 3.000000000000000000
+            Position.Y = -19.000000000000000000
+            Size.Width = 102.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            Text = 'Confirmar Senha:'
+          end
+        end
+        object EdtUser: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          TabOrder = 2
+          Position.X = 19.000000000000000000
+          Position.Y = 83.000000000000000000
+          Size.Width = 137.000000000000000000
+          Size.Height = 22.000000000000000000
+          Size.PlatformDefault = False
+          object LbUser: TLabel
+            Position.X = -1.000000000000000000
+            Position.Y = -22.000000000000000000
+            Size.Width = 46.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            Text = 'Usu'#225'rio:'
+          end
+        end
+      end
+    end
+  end
+  object PnlMenu: TPanel
+    Align = Bottom
+    Position.Y = 341.000000000000000000
+    Size.Width = 679.000000000000000000
+    Size.Height = 49.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    object BtnEdit: TButton
+      Align = Left
+      Margins.Left = 5.000000000000000000
+      Margins.Top = 5.000000000000000000
+      Margins.Right = 5.000000000000000000
+      Margins.Bottom = 5.000000000000000000
+      Position.X = 5.000000000000000000
+      Position.Y = 5.000000000000000000
+      Size.Width = 60.000000000000000000
+      Size.Height = 39.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 4
+      Text = 'Editar'
+    end
+    object BtnSalv: TButton
+      Align = Left
+      Margins.Left = 5.000000000000000000
+      Margins.Top = 5.000000000000000000
+      Margins.Right = 5.000000000000000000
+      Margins.Bottom = 5.000000000000000000
+      Position.X = 75.000000000000000000
+      Position.Y = 5.000000000000000000
+      Size.Width = 60.000000000000000000
+      Size.Height = 39.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Text = 'Salvar'
+    end
+    object BtnCanc: TButton
+      Align = Left
+      Margins.Left = 5.000000000000000000
+      Margins.Top = 5.000000000000000000
+      Margins.Right = 5.000000000000000000
+      Margins.Bottom = 5.000000000000000000
+      Position.X = 145.000000000000000000
+      Position.Y = 5.000000000000000000
+      Size.Width = 60.000000000000000000
+      Size.Height = 39.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      Text = 'Cancelar'
+    end
+    object BtnPesq: TButton
+      Align = Left
+      Margins.Left = 5.000000000000000000
+      Margins.Top = 5.000000000000000000
+      Margins.Right = 5.000000000000000000
+      Margins.Bottom = 5.000000000000000000
+      Position.X = 215.000000000000000000
+      Position.Y = 5.000000000000000000
+      Size.Width = 60.000000000000000000
+      Size.Height = 39.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 2
+      Text = 'Pesquisar'
+    end
+    object BtnSair: TButton
+      Align = Right
+      Margins.Left = 5.000000000000000000
+      Margins.Top = 5.000000000000000000
+      Margins.Right = 5.000000000000000000
+      Margins.Bottom = 5.000000000000000000
+      Position.X = 614.000000000000000000
+      Position.Y = 5.000000000000000000
+      Size.Width = 60.000000000000000000
+      Size.Height = 39.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 3
+      Text = 'Sair'
+    end
+  end
+end
