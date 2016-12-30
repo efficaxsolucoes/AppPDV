@@ -6,7 +6,7 @@ uses
   System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
   FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs,
   FMX.Controls.Presentation, FMX.StdCtrls, FMX.Menus, FMX.Layouts, frmNDefOS,
-  frmCadCli, frmCadTec, frmCadUser, frmLogin, frmPrincipal, frmHist, frmNDuvOS;
+  frmCadCli, frmCadTec, frmCadUser, frmLogin, ufrmMenu, frmHist, frmNDuvOS;
 
   Procedure OnClp     (Clp  : TCalloutPanel ) ;
   Procedure OffClp    (Clp  : TCalloutPanel ) ;
@@ -45,8 +45,8 @@ Procedure OnOffClp (Clp : TCalloutPanel);
 
 Procedure frmPrincOn;
   Begin
-    Application.CreateForm(TPrincipal, Principal);
-    Principal.Show;
+    Application.CreateForm(TfrmMenu, frmMenu);
+    frmMenu.Show;
   End;
 
 Procedure CloseForms(Form: TForm);
@@ -58,32 +58,32 @@ Procedure CloseForms(Form: TForm);
   Procedure CadCliOn  ;
     Begin
     Application.CreateForm(TCadCli, CadCli);
-    Principal.Show;
+    frmMenu.Show;
   End;
   Procedure CadTecOn;
     Begin
     Application.CreateForm(TCadTec, CadTec);
-    Principal.Show;
+    frmMenu.Show;
   End;
   Procedure CadUserOn;
     Begin
     Application.CreateForm(TCadUser, CadUser);
-    Principal.Show;
+    frmMenu.Show;
   End;
   Procedure HistOn;
     Begin
     Application.CreateForm(THist, Hist);
-    Principal.Show;
+    frmMenu.Show;
   End;
   Procedure NDefOSOn;
     Begin
     Application.CreateForm(TNDefOS, NDefOS);
-    Principal.Show;
+    frmMenu.Show;
   End;
   Procedure NDuvOSOn;
     Begin
     Application.CreateForm(TNDuvOS, NDuvOS);
-    Principal.Show;
+    frmMenu.Show;
   End;
 
 end.
