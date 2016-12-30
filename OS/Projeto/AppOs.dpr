@@ -1,10 +1,10 @@
-program pjtOS;
+program AppOs;
 
 uses
   System.StartUpCopy,
   FMX.Forms,
   frmLogin in '..\Visual\frmLogin.pas' {Login},
-  frmPrincipal in '..\Visual\frmPrincipal.pas',
+  ufrmMenu in '..\Visual\ufrmMenu.pas' {frmMenu},
   frmCadTec in '..\Visual\frmCadTec.pas' {CadTec},
   frmCadUser in '..\Visual\frmCadUser.pas' {CadUser},
   frmCadCli in '..\Visual\frmCadCli.pas' {CadCli},
@@ -17,8 +17,6 @@ uses
 
 begin
   Application.Initialize;
-  Application.CreateForm(TLogin, Login);
-  Application.CreateForm(TNDuvOS, NDuvOS);
-  Application.CreateForm(THist, Hist);
+  Application.CreateForm(TfrmMenu, frmMenu);
   Application.Run;
 end.

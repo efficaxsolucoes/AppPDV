@@ -1,4 +1,4 @@
-unit frmPrincipal;
+unit ufrmMenu;
 
 interface
 
@@ -8,7 +8,7 @@ uses
   FMX.Layouts, FMX.Controls.Presentation;
 
 type
-  TPrincipal = class(TForm)
+  TfrmMenu = class(TForm)
     PnlMenu: TPanel;
     BtnOS: TButton;
     BtnCadastro: TButton;
@@ -48,7 +48,7 @@ type
   end;
 
 var
-  Principal: TPrincipal;
+  frmMenu: TfrmMenu;
 
 implementation
 
@@ -56,72 +56,72 @@ implementation
 
 uses UPrinc;
 
-procedure TPrincipal.BtnCadastroClick(Sender: TObject);
+procedure TfrmMenu.BtnCadastroClick(Sender: TObject);
 begin
  UPrinc.OnOffClp(ClpCadastro);
 end;
 
-procedure TPrincipal.BtnClienteClick(Sender: TObject);
+procedure TfrmMenu.BtnClienteClick(Sender: TObject);
 begin
  UPrinc.CadCliOn;
 end;
 
-procedure TPrincipal.BtnClienteEnter(Sender: TObject);
+procedure TfrmMenu.BtnClienteEnter(Sender: TObject);
 begin
  UPrinc.OnClp(ClpCadastro);
 end;
 
-procedure TPrincipal.BtnClienteMouseEnter(Sender: TObject);
+procedure TfrmMenu.BtnClienteMouseEnter(Sender: TObject);
 begin
  UPrinc.OnClp(ClpCadastro);
 end;
 
-procedure TPrincipal.BtnHistoricoClick(Sender: TObject);
+procedure TfrmMenu.BtnHistoricoClick(Sender: TObject);
 begin
  UPrinc.HistOn;
 end;
 
-procedure TPrincipal.BtnNDefClick(Sender: TObject);
+procedure TfrmMenu.BtnNDefClick(Sender: TObject);
 begin
  UPrinc.NDefOSOn;
 end;
 
-procedure TPrincipal.BtnNDefMouseEnter(Sender: TObject);
+procedure TfrmMenu.BtnNDefMouseEnter(Sender: TObject);
 begin
  UPrinc.OnClp(ClpOS);
 end;
 
-procedure TPrincipal.BtnNDuvClick(Sender: TObject);
+procedure TfrmMenu.BtnNDuvClick(Sender: TObject);
 begin
  UPrinc.NDuvOSOn;
 end;
 
-procedure TPrincipal.BtnOSClick(Sender: TObject);
+procedure TfrmMenu.BtnOSClick(Sender: TObject);
 begin
  UPrinc.OnOffClp(ClpOS);
 end;
 
-procedure TPrincipal.BtnSairClick(Sender: TObject);
+procedure TfrmMenu.BtnSairClick(Sender: TObject);
 begin
- UPrinc.CloseForms(Principal);
+ UPrinc.CloseForms(frmMenu);
 end;
 
-procedure TPrincipal.BtnTecnicoClick(Sender: TObject);
+procedure TfrmMenu.BtnTecnicoClick(Sender: TObject);
 begin
  UPrinc.CadTecOn;
 end;
 
-procedure TPrincipal.BtnUsuarioClick(Sender: TObject);
+procedure TfrmMenu.BtnUsuarioClick(Sender: TObject);
 begin
  UPrinc.CadUserOn;
 end;
 
-procedure TPrincipal.ClpCadastroMouseLeave(Sender: TObject);
+procedure TfrmMenu.ClpCadastroMouseLeave(Sender: TObject);
 begin
  UPrinc.OffClp(ClpCadastro);
 end;
 
-procedure TPrincipal.ClpOSMouseLeave(Sender: TObject);
+procedure TfrmMenu.ClpOSMouseLeave(Sender: TObject);
 begin
  UPrinc.OffClp(ClpOS);
 end;

@@ -1,4 +1,4 @@
-object Principal: TPrincipal
+object frmMenu: TfrmMenu
   Left = 0
   Top = 0
   Caption = 'Form1'
