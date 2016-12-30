@@ -27,6 +27,10 @@ type
     BtnUsuario: TButton;
     BtnTecnico: TButton;
     StBPrinc: TStatusBar;
+    LbTimer: TLabel;
+    Timer1: TTimer;
+    LbUser: TLabel;
+    LbBanco: TLabel;
     procedure BtnOSClick(Sender: TObject);
     procedure BtnCadastroClick(Sender: TObject);
     procedure ClpOSMouseLeave(Sender: TObject);
@@ -41,6 +45,7 @@ type
     procedure BtnUsuarioClick(Sender: TObject);
     procedure BtnSairClick(Sender: TObject);
     procedure BtnClienteMouseEnter(Sender: TObject);
+    procedure Timer1Timer(Sender: TObject);
   private
     { Private declarations }
   public
@@ -124,6 +129,11 @@ end;
 procedure TfrmMenu.ClpOSMouseLeave(Sender: TObject);
 begin
  UPrinc.OffClp(ClpOS);
+end;
+
+procedure TPrincipal.Timer1Timer(Sender: TObject);
+begin
+  LbTimer.Text := DateTimetoSTR(Now);
 end;
 
 end.
