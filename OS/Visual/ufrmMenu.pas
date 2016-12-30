@@ -131,7 +131,7 @@ begin
  UPrinc.OffClp(ClpOS);
 end;
 
-procedure TPrincipal.Timer1Timer(Sender: TObject);
+procedure TfrmMenu.Timer1Timer(Sender: TObject);
 begin
   LbTimer.Text := DateTimetoSTR(Now);
 end;
