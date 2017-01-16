@@ -1,4 +1,4 @@
-object frmMenu: TfrmMenu
+﻿object frmMain: TfrmMain
   Left = 0
   Top = 0
   Caption = 'Form1'
@@ -9,241 +9,131 @@ object frmMenu: TfrmMenu
   FormFactor.Height = 480
   FormFactor.Devices = [Desktop]
   DesignerMasterStyle = 0
-  object PnlMenu: TPanel
-    Align = Top
-    Size.Width = 789.000000000000000000
-    Size.Height = 73.000000000000000000
-    Size.PlatformDefault = False
-    TabOrder = 0
-    object BtnOS: TButton
-      Align = Left
-      Margins.Left = 5.000000000000000000
-      Margins.Top = 10.000000000000000000
-      Margins.Right = 5.000000000000000000
-      Margins.Bottom = 10.000000000000000000
-      Position.X = 5.000000000000000000
-      Position.Y = 10.000000000000000000
-      Size.Width = 100.000000000000000000
-      Size.Height = 53.000000000000000000
-      Size.PlatformDefault = False
-      TabOrder = 5
-      Text = 'O.S.'
-      OnClick = BtnOSClick
-    end
-    object BtnCadastro: TButton
-      Align = Left
-      Margins.Left = 5.000000000000000000
-      Margins.Top = 10.000000000000000000
-      Margins.Right = 5.000000000000000000
-      Margins.Bottom = 10.000000000000000000
-      Position.X = 115.000000000000000000
-      Position.Y = 10.000000000000000000
-      Size.Width = 102.000000000000000000
-      Size.Height = 53.000000000000000000
-      Size.PlatformDefault = False
-      TabOrder = 4
-      Text = 'Cadastro'
-      OnClick = BtnCadastroClick
-    end
-    object BtnSair: TButton
-      Align = Right
-      Margins.Left = 5.000000000000000000
-      Margins.Top = 10.000000000000000000
-      Margins.Right = 5.000000000000000000
-      Margins.Bottom = 10.000000000000000000
-      Position.X = 680.000000000000000000
-      Position.Y = 10.000000000000000000
-      Size.Width = 104.000000000000000000
-      Size.Height = 53.000000000000000000
-      Size.PlatformDefault = False
-      TabOrder = 3
-      Text = 'Sair'
-      OnClick = BtnSairClick
-    end
-    object BtnHelp: TButton
-      Align = Left
-      Margins.Left = 5.000000000000000000
-      Margins.Top = 10.000000000000000000
-      Margins.Right = 5.000000000000000000
-      Margins.Bottom = 10.000000000000000000
-      Position.X = 447.000000000000000000
-      Position.Y = 10.000000000000000000
-      Size.Width = 102.000000000000000000
-      Size.Height = 53.000000000000000000
-      Size.PlatformDefault = False
-      TabOrder = 2
-      Text = 'Ajuda'
-    end
-    object BtnConfig: TButton
-      Align = Left
-      Margins.Left = 5.000000000000000000
-      Margins.Top = 10.000000000000000000
-      Margins.Right = 5.000000000000000000
-      Margins.Bottom = 10.000000000000000000
-      Position.X = 339.000000000000000000
-      Position.Y = 10.000000000000000000
-      Size.Width = 98.000000000000000000
-      Size.Height = 53.000000000000000000
-      Size.PlatformDefault = False
-      TabOrder = 0
-      Text = 'Configura'#231#245'es'
-    end
-    object BtnRel: TButton
-      Align = Left
-      Margins.Left = 5.000000000000000000
-      Margins.Top = 10.000000000000000000
-      Margins.Right = 5.000000000000000000
-      Margins.Bottom = 10.000000000000000000
-      Position.X = 227.000000000000000000
-      Position.Y = 10.000000000000000000
-      Size.Width = 102.000000000000000000
-      Size.Height = 53.000000000000000000
-      Size.PlatformDefault = False
-      TabOrder = 1
-      Text = 'Relat'#243'rios'
-    end
-  end
-  object PnlPrinc: TPanel
+  object lytMain: TLayout
     Align = Client
     Size.Width = 789.000000000000000000
-    Size.Height = 425.000000000000000000
+    Size.Height = 520.000000000000000000
     Size.PlatformDefault = False
-    TabOrder = 2
-    object LtPrinc: TLayout
-      Align = Client
+    TabOrder = 0
+    object tlbMain: TToolBar
       Size.Width = 789.000000000000000000
-      Size.Height = 425.000000000000000000
+      Size.Height = 40.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 0
-      object ClpOS: TCalloutPanel
-        Padding.Top = 11.000000000000000000
-        Margins.Left = 5.000000000000000000
-        Position.X = 5.000000000000000000
-        Position.Y = -11.000000000000000000
-        Size.Width = 100.000000000000000000
-        Size.Height = 117.000000000000000000
+      object spbBack: TSpeedButton
+        Align = Left
+        Size.Width = 80.000000000000000000
+        Size.Height = 40.000000000000000000
         Size.PlatformDefault = False
-        Visible = False
-        TabOrder = 0
-        OnMouseLeave = ClpOSMouseLeave
-        CalloutWidth = 23.000000000000000000
-        CalloutLength = 11.000000000000000000
-        object BtnNDef: TButton
-          Align = Top
-          Margins.Left = 5.000000000000000000
-          Margins.Top = 10.000000000000000000
-          Margins.Right = 5.000000000000000000
-          Position.X = 5.000000000000000000
-          Position.Y = 21.000000000000000000
-          Size.Width = 90.000000000000000000
-          Size.Height = 22.000000000000000000
-          Size.PlatformDefault = False
-          TabOrder = 2
-          Text = 'Defeito'
-          OnClick = BtnNDefClick
-          OnMouseEnter = BtnNDefMouseEnter
-        end
-        object BtnHistorico: TButton
-          Align = Top
-          Margins.Left = 5.000000000000000000
-          Margins.Top = 10.000000000000000000
-          Margins.Right = 5.000000000000000000
-          Position.X = 5.000000000000000000
-          Position.Y = 85.000000000000000000
-          Size.Width = 90.000000000000000000
-          Size.Height = 22.000000000000000000
-          Size.PlatformDefault = False
-          TabOrder = 1
-          Text = 'Hist'#243'rico'
-          OnClick = BtnHistoricoClick
-          OnMouseEnter = BtnNDefMouseEnter
-        end
-        object BtnNDuv: TButton
-          Align = Top
-          Margins.Left = 5.000000000000000000
-          Margins.Top = 10.000000000000000000
-          Margins.Right = 5.000000000000000000
-          Position.X = 5.000000000000000000
-          Position.Y = 53.000000000000000000
-          Size.Width = 90.000000000000000000
-          Size.Height = 22.000000000000000000
-          Size.PlatformDefault = False
-          TabOrder = 0
-          Text = 'D'#250'vida'
-          OnClick = BtnNDuvClick
-          OnMouseEnter = BtnNDefMouseEnter
-        end
-      end
-      object ClpCadastro: TCalloutPanel
-        Padding.Top = 11.000000000000000000
-        Margins.Left = 5.000000000000000000
-        Position.X = 115.000000000000000000
-        Position.Y = -11.000000000000000000
-        Size.Width = 100.000000000000000000
-        Size.Height = 116.000000000000000000
-        Size.PlatformDefault = False
-        Visible = False
-        TabOrder = 1
-        OnMouseLeave = ClpCadastroMouseLeave
-        CalloutWidth = 23.000000000000000000
-        CalloutLength = 11.000000000000000000
-        object BtnCliente: TButton
-          Align = Top
-          Margins.Left = 5.000000000000000000
-          Margins.Top = 10.000000000000000000
-          Margins.Right = 5.000000000000000000
-          Position.X = 5.000000000000000000
-          Position.Y = 21.000000000000000000
-          Size.Width = 90.000000000000000000
-          Size.Height = 22.000000000000000000
-          Size.PlatformDefault = False
-          TabOrder = 2
-          Text = 'Cliente'
-          OnClick = BtnClienteClick
-          OnEnter = BtnClienteEnter
-          OnMouseEnter = BtnClienteMouseEnter
-        end
-        object BtnUsuario: TButton
-          Align = Top
-          Margins.Left = 5.000000000000000000
-          Margins.Top = 10.000000000000000000
-          Margins.Right = 5.000000000000000000
-          Position.X = 5.000000000000000000
-          Position.Y = 85.000000000000000000
-          Size.Width = 90.000000000000000000
-          Size.Height = 22.000000000000000000
-          Size.PlatformDefault = False
-          TabOrder = 1
-          Text = 'Usu'#225'rio'
-          OnClick = BtnUsuarioClick
-          OnEnter = BtnClienteEnter
-          OnMouseEnter = BtnClienteMouseEnter
-        end
-        object BtnTecnico: TButton
-          Align = Top
-          Margins.Left = 5.000000000000000000
-          Margins.Top = 10.000000000000000000
-          Margins.Right = 5.000000000000000000
-          Position.X = 5.000000000000000000
-          Position.Y = 53.000000000000000000
-          Size.Width = 90.000000000000000000
-          Size.Height = 22.000000000000000000
-          Size.PlatformDefault = False
-          TabOrder = 0
-          Text = 'T'#233'cnico'
-          OnClick = BtnTecnicoClick
-          OnEnter = BtnClienteEnter
-          OnMouseEnter = BtnClienteMouseEnter
-        end
+        StyleLookup = 'detailstoolbutton'
+        Text = 'spbBack'
       end
     end
   end
-  object StBPrinc: TStatusBar
-    Position.Y = 498.000000000000000000
-    ShowSizeGrip = True
-    Size.Width = 789.000000000000000000
-    Size.Height = 22.000000000000000000
+  object mtvMain: TMultiView
+    MasterButton = spbBack
+    Mode = Drawer
+    Size.Width = 250.000000000000000000
+    Size.Height = 520.000000000000000000
     Size.PlatformDefault = False
     TabOrder = 1
+    object lbMainMenu: TListBox
+      Align = Client
+      Size.Width = 249.000000000000000000
+      Size.Height = 520.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'transparentlistboxstyle'
+      TabOrder = 0
+      DisableFocusEffect = True
+      DefaultItemStyles.ItemStyle = ''
+      DefaultItemStyles.GroupHeaderStyle = ''
+      DefaultItemStyles.GroupFooterStyle = ''
+      Viewport.Width = 249.000000000000000000
+      Viewport.Height = 520.000000000000000000
+      object lbghInicio: TListBoxGroupHeader
+        TabOrder = 14
+        Text = 'In'#237'cio'
+        Visible = False
+      end
+      object lbghCadastro: TListBoxGroupHeader
+        Size.Width = 249.000000000000000000
+        Size.Height = 25.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        Text = 'Cadastro'
+      end
+      object lbiCliente: TListBoxItem
+        Position.Y = 25.000000000000000000
+        TabOrder = 1
+        Text = 'Cliente'
+        OnClick = lbiClienteClick
+      end
+      object Técnico: TListBoxItem
+        Position.Y = 44.000000000000000000
+        TabOrder = 2
+        Text = 'T'#233'cnico'
+      end
+      object Loja: TListBoxItem
+        Position.Y = 63.000000000000000000
+        TabOrder = 3
+        Text = 'Loja'
+      end
+      object Parceiro: TListBoxItem
+        Position.Y = 82.000000000000000000
+        TabOrder = 4
+        Text = 'Parceiro'
+      end
+      object lbiUsuario: TListBoxItem
+        Position.Y = 101.000000000000000000
+        TabOrder = 5
+        Text = 'Usu'#225'rio '
+      end
+      object lbghAtendimento: TListBoxGroupHeader
+        Position.Y = 120.000000000000000000
+        Size.Width = 249.000000000000000000
+        Size.Height = 25.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 6
+        Text = 'Atendimento'
+      end
+      object lbiNovo: TListBoxItem
+        Position.Y = 145.000000000000000000
+        TabOrder = 7
+        Text = 'Novo'
+      end
+      object lbiAbertos: TListBoxItem
+        Position.Y = 164.000000000000000000
+        TabOrder = 8
+        Text = 'Abertos'
+      end
+      object Relatórios: TListBoxGroupHeader
+        Position.Y = 183.000000000000000000
+        Size.Width = 249.000000000000000000
+        Size.Height = 25.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 9
+        Text = 'Relat'#243'rios'
+      end
+      object Sistema: TListBoxGroupHeader
+        Position.Y = 208.000000000000000000
+        TabOrder = 10
+        Text = 'Sistema'
+      end
+      object Preferências: TListBoxItem
+        Position.Y = 227.000000000000000000
+        TabOrder = 11
+        Text = 'Prefer'#234'ncias'
+      end
+      object lbiTrocUser: TListBoxItem
+        Position.Y = 246.000000000000000000
+        TabOrder = 12
+        Text = 'Trocar Usu'#225'rio'
+      end
+      object lbiSair: TListBoxItem
+        Position.Y = 265.000000000000000000
+        TabOrder = 13
+        Text = 'Sair'
+      end
+    end
   end
 end

@@ -23,7 +23,6 @@ object Login: TLogin
       Size.PlatformDefault = False
       TabOrder = 2
       Text = 'Entrar'
-      OnClick = BtnEntClick
     end
     object EdtUser: TEdit
       Touch.InteractiveGestures = [LongTap, DoubleTap]

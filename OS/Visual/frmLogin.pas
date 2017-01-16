@@ -17,7 +17,6 @@ type
     EdtSen: TEdit;
     BtnCanc: TButton;
     ImageViewer1: TImageViewer;
-    procedure BtnEntClick(Sender: TObject);
     procedure BtnCancClick(Sender: TObject);
   private
     { Private declarations }
@@ -38,11 +37,5 @@ procedure TLogin.BtnCancClick(Sender: TObject);
 begin
   Close;
 end;
-
-procedure TLogin.BtnEntClick(Sender: TObject);
-
-  begin
-    UPrinc.frmPrincOn;
-  end;
 
 end.
