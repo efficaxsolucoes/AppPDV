@@ -317,7 +317,7 @@
             <FormType>fmx</FormType>
         </DCCReference>
         <DCCReference Include="..\Visual\ufrmMenu.pas">
-            <Form>frmMenu</Form>
+            <Form>frmMain</Form>
             <FormType>fmx</FormType>
         </DCCReference>
         <DCCReference Include="..\Visual\frmCadTec.pas">
@@ -328,8 +328,8 @@
             <Form>CadUser</Form>
             <FormType>fmx</FormType>
         </DCCReference>
-        <DCCReference Include="..\Visual\frmCadCli.pas">
-            <Form>CadCli</Form>
+        <DCCReference Include="..\Visual\ufrmCadCli.pas">
+            <Form>frmCadCli</Form>
             <FormType>fmx</FormType>
         </DCCReference>
         <DCCReference Include="..\Regras\UPrinc.pas"/>
@@ -372,14 +372,14 @@
                 </Source>
             </Delphi.Personality>
             <Deployment Version="3">
-                <DeployFile LocalName="..\EXE\AppOs.exe" Configuration="Debug" Class="ProjectOutput">
-                    <Platform Name="Win32">
-                        <RemoteName>AppOs.exe</RemoteName>
+                <DeployFile LocalName="$(BDS)\Redist\osx32\libcgunwind.1.0.dylib" Class="DependencyModule">
+                    <Platform Name="OSX32">
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
-                <DeployFile LocalName="$(BDS)\Redist\osx32\libcgunwind.1.0.dylib" Class="DependencyModule">
-                    <Platform Name="OSX32">
+                <DeployFile LocalName="..\EXE\AppOs.exe" Configuration="Debug" Class="ProjectOutput">
+                    <Platform Name="Win32">
+                        <RemoteName>AppOs.exe</RemoteName>
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
