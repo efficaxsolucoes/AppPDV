@@ -4,20 +4,10 @@ interface
 
 uses
   System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
-  FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs,
-  FMX.Controls.Presentation, FMX.StdCtrls, FMX.Layouts, FMX.ExtCtrls, FMX.Edit;
+  FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs;
 
 type
-  TLogin = class(TForm)
-    Layout1: TLayout;
-    BtnEnt: TButton;
-    LbUser: TLabel;
-    LbSen: TLabel;
-    EdtUser: TEdit;
-    EdtSen: TEdit;
-    BtnCanc: TButton;
-    ImageViewer1: TImageViewer;
-    procedure BtnCancClick(Sender: TObject);
+  Tlogin = class(TForm)
   private
     { Private declarations }
   public
@@ -25,17 +15,10 @@ type
   end;
 
 var
-  Login: TLogin;
+  login: Tlogin;
 
 implementation
 
 {$R *.fmx}
-
-uses UPrinc;
-
-procedure TLogin.BtnCancClick(Sender: TObject);
-begin
-  Close;
-end;
 
 end.

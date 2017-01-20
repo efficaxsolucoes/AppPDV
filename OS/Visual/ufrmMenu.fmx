@@ -4,7 +4,7 @@
   Caption = 'Form1'
   ClientHeight = 520
   ClientWidth = 789
-  WindowState = wsMaximized
+  Position = DesktopCenter
   FormFactor.Width = 320
   FormFactor.Height = 480
   FormFactor.Devices = [Desktop]

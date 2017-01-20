@@ -47,7 +47,7 @@ uses UPrinc;
 
 procedure TfrmMain.lbiClienteClick(Sender: TObject);
 begin
- UPrinc.AbreForm(TfrmCadCli);
+  UPrinc.AbreForm(TfrmCadCli);
 end;
 
 end.
