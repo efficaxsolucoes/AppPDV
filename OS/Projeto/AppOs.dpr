@@ -9,8 +9,8 @@ uses
   ufrmCadParc in '..\Visual\ufrmCadParc.pas' {frmCadParc},
   UPrinc in '..\Regras\UPrinc.pas',
   ufrmCadLoj in '..\Visual\ufrmCadLoj.pas' {frmCadLoj},
-  frmNDuvOS in '..\Visual\frmNDuvOS.pas' {NDuvOS},
-  frmHist in '..\Visual\frmHist.pas',
+  ufrmAtend in '..\Visual\ufrmAtend.pas' {frmAtend},
+  ufrmMAtend in '..\Visual\ufrmMAtend.pas' {frmMAtend},
   ufrmCadProd in '..\Visual\ufrmCadProd.pas' {frmCadProd};
 
 {$R *.res}

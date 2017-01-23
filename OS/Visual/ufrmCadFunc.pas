@@ -14,13 +14,12 @@ type
     lytBase: TLayout;
     tlbCadCli: TToolBar;
     spbBack: TSpeedButton;
-    cbEditar: TCornerButton;
+    cbEdVol: TCornerButton;
     cbSalvar: TCornerButton;
-    cbVoltar: TCornerButton;
     cbApagar: TCornerButton;
-    tbCadCli: TTabControl;
+    tbCadFunc: TTabControl;
     tbiLista: TTabItem;
-    ListView1: TListView;
+    lvCadFunc: TListView;
     tbiDad: TTabItem;
     lbxCadCli: TListBox;
     lbghDadosCli: TListBoxGroupHeader;
@@ -98,6 +97,7 @@ type
     StyleBook1: TStyleBook;
     cbFuncao: TCornerButton;
     procedure swtAcSistSwitch(Sender: TObject);
+    procedure cbEdVolClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -110,6 +110,13 @@ var
 implementation
 
 {$R *.fmx}
+
+uses UPrinc;
+
+procedure TfrmCadFunc.cbEdVolClick(Sender: TObject);
+begin
+  UPrinc.TabControl(cbEdVol, tbCadFunc);
+end;
 
 procedure TfrmCadFunc.swtAcSistSwitch(Sender: TObject);
 begin

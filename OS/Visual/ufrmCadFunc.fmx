@@ -30,7 +30,7 @@ object frmCadFunc: TfrmCadFunc
         StyleLookup = 'detailstoolbutton'
         Text = 'spbBack'
       end
-      object cbEditar: TCornerButton
+      object cbEdVol: TCornerButton
         Align = Right
         Margins.Top = 2.000000000000000000
         Margins.Right = 5.000000000000000000
@@ -41,10 +41,11 @@ object frmCadFunc: TfrmCadFunc
         Size.Width = 80.000000000000000000
         Size.Height = 36.000000000000000000
         Size.PlatformDefault = False
-        TabOrder = 3
+        TabOrder = 2
         Text = 'Editar'
         XRadius = 3.000000000000000000
         YRadius = 3.000000000000000000
+        OnClick = cbEdVolClick
       end
       object cbSalvar: TCornerButton
         Align = Right
@@ -57,25 +58,8 @@ object frmCadFunc: TfrmCadFunc
         Size.Width = 80.000000000000000000
         Size.Height = 36.000000000000000000
         Size.PlatformDefault = False
-        TabOrder = 2
-        Text = 'Salvar'
-        XRadius = 3.000000000000000000
-        YRadius = 3.000000000000000000
-      end
-      object cbVoltar: TCornerButton
-        Align = Right
-        Margins.Top = 2.000000000000000000
-        Margins.Right = 5.000000000000000000
-        Margins.Bottom = 2.000000000000000000
-        Position.X = 435.000000000000000000
-        Position.Y = 2.000000000000000000
-        Sides = [Top, Left, Bottom, Right]
-        Size.Width = 80.000000000000000000
-        Size.Height = 36.000000000000000000
-        Size.PlatformDefault = False
         TabOrder = 1
-        Text = 'Voltar'
-        Visible = False
+        Text = 'Salvar'
         XRadius = 3.000000000000000000
         YRadius = 3.000000000000000000
       end
@@ -142,13 +126,13 @@ object frmCadFunc: TfrmCadFunc
         Top = 8
       end
     end
-    object tbCadCli: TTabControl
+    object tbCadFunc: TTabControl
       Align = Client
       Size.Width = 800.000000000000000000
       Size.Height = 560.000000000000000000
       Size.PlatformDefault = False
       StyleLookup = 'TabControl1Style1'
-      TabIndex = 1
+      TabIndex = 0
       TabOrder = 1
       TabPosition = None
       Sizes = (
@@ -160,7 +144,7 @@ object frmCadFunc: TfrmCadFunc
         CustomIcon = <
           item
           end>
-        IsSelected = False
+        IsSelected = True
         Size.Width = 8.000000000000000000
         Size.Height = 8.000000000000000000
         Size.PlatformDefault = False
@@ -169,7 +153,7 @@ object frmCadFunc: TfrmCadFunc
         Text = 'tbiLista'
         ExplicitSize.cx = 69.000000000000000000
         ExplicitSize.cy = 26.000000000000000000
-        object ListView1: TListView
+        object lvCadFunc: TListView
           ItemAppearanceClassName = 'TListItemAppearance'
           ItemEditAppearanceClassName = 'TListItemShowCheckAppearance'
           HeaderAppearanceClassName = 'TListHeaderObjects'
@@ -189,7 +173,7 @@ object frmCadFunc: TfrmCadFunc
         CustomIcon = <
           item
           end>
-        IsSelected = True
+        IsSelected = False
         Size.Width = 8.000000000000000000
         Size.Height = 8.000000000000000000
         Size.PlatformDefault = False

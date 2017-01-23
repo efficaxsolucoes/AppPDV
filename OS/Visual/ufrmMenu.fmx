@@ -104,11 +104,13 @@
         Position.Y = 145.000000000000000000
         TabOrder = 7
         Text = 'Novo'
+        OnClick = lbiNovoClick
       end
       object lbiAbertos: TListBoxItem
         Position.Y = 164.000000000000000000
         TabOrder = 8
         Text = 'Abertos'
+        OnClick = lbiAbertosClick
       end
       object Relatórios: TListBoxGroupHeader
         Position.Y = 183.000000000000000000

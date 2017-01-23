@@ -12,15 +12,14 @@ uses
 type
   TfrmCadParc = class(TForm)
     lytBase: TLayout;
-    tlbCadCli: TToolBar;
+    tlbCadParc: TToolBar;
     spbBack: TSpeedButton;
-    cbEditar: TCornerButton;
+    cbEdVol: TCornerButton;
     cbSalvar: TCornerButton;
-    cbVoltar: TCornerButton;
     cbApagar: TCornerButton;
-    tbCadCli: TTabControl;
+    tbCadParc: TTabControl;
     tbiLista: TTabItem;
-    ListView1: TListView;
+    lvCadParc: TListView;
     tbiDad: TTabItem;
     lbxCadCli: TListBox;
     lbghDadosCli: TListBoxGroupHeader;
@@ -89,6 +88,7 @@ type
     cbAddEnd: TCornerButton;
     StyleBook1: TStyleBook;
     procedure swtPesJurSwitch(Sender: TObject);
+    procedure cbEdVolClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -103,6 +103,11 @@ implementation
 {$R *.fmx}
 
 uses UPrinc;
+
+procedure TfrmCadParc.cbEdVolClick(Sender: TObject);
+begin
+  UPrinc.TabControl(cbEdVol , tbCadParc);
+end;
 
 procedure TfrmCadParc.swtPesJurSwitch(Sender: TObject);
 begin

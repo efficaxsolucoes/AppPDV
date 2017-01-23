@@ -6,7 +6,7 @@ uses
   System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
   FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.StdCtrls,
   FMX.Layouts, FMX.Controls.Presentation, FMX.ListBox, FMX.MultiView, ufrmCadCli,
-  ufrmCadFunc, ufrmCadParc, ufrmCadProd, ufrmCadLoj;
+  ufrmCadFunc, ufrmCadParc, ufrmCadProd, ufrmCadLoj, ufrmAtend, ufrmMAtend;
 
 type
   TfrmMain = class(TForm)
@@ -35,6 +35,8 @@ type
     procedure lbiParceiroClick(Sender: TObject);
     procedure lbiProdutoClick(Sender: TObject);
     procedure LojaClick(Sender: TObject);
+    procedure lbiAbertosClick(Sender: TObject);
+    procedure lbiNovoClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -50,6 +52,11 @@ implementation
 
 uses UPrinc;
 
+procedure TfrmMain.lbiAbertosClick(Sender: TObject);
+begin
+  UPrinc.AbreForm(TfrmMAtend);
+end;
+
 procedure TfrmMain.lbiClienteClick(Sender: TObject);
 begin
   UPrinc.AbreForm(TfrmCadCli);
@@ -58,6 +65,11 @@ end;
 procedure TfrmMain.lbiFuncionarioClick(Sender: TObject);
 begin
  UPrinc.AbreForm(TfrmCadFunc);
+end;
+
+procedure TfrmMain.lbiNovoClick(Sender: TObject);
+begin
+  UPrinc.AbreForm(TfrmAtend);
 end;
 
 procedure TfrmMain.lbiParceiroClick(Sender: TObject);

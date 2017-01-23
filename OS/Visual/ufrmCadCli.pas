@@ -17,7 +17,7 @@ type
     tbCadCli: TTabControl;
     tbiLista: TTabItem;
     tbiDad: TTabItem;
-    ListView1: TListView;
+    lvCadCli: TListView;
     StyleBook1: TStyleBook;
     lbxCadCli: TListBox;
     lbghDadosCli: TListBoxGroupHeader;
@@ -84,12 +84,10 @@ type
     edtRua: TEdit;
     lbNum: TLabel;
     edtNum: TEdit;
-    cbEditar: TCornerButton;
+    cbEdVol: TCornerButton;
     cbSalvar: TCornerButton;
-    cbVoltar: TCornerButton;
     cbApagar: TCornerButton;
-    procedure cbEditarClick(Sender: TObject);
-    procedure cbVoltarClick(Sender: TObject);
+    procedure cbEdVolClick(Sender: TObject);
     procedure swtPesJurSwitch(Sender: TObject);
   private
     { Private declarations }
@@ -106,18 +104,10 @@ implementation
 
 uses UPrinc;
 
-procedure TfrmCadCli.cbEditarClick(Sender: TObject);
-begin
- cbVoltar.Visible := True;
- cbEditar.Visible := False;
- tbCadCli.Next();
-end;
 
-procedure TfrmCadCli.cbVoltarClick(Sender: TObject);
+procedure TfrmCadCli.cbEdVolClick(Sender: TObject);
 begin
-  cbEditar.Visible := True;
-  cbVoltar.Visible := False;
-  tbCadCli.Previous();
+  UPrinc.TabControl(cbEdVol, tbCadCli);
 end;
 
 procedure TfrmCadCli.swtPesJurSwitch(Sender: TObject);

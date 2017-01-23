@@ -29,7 +29,7 @@ object frmCadProd: TfrmCadProd
         StyleLookup = 'detailstoolbutton'
         Text = 'spbBack'
       end
-      object cbEditar: TCornerButton
+      object cbEdVol: TCornerButton
         Align = Right
         Margins.Top = 2.000000000000000000
         Margins.Right = 5.000000000000000000
@@ -44,6 +44,7 @@ object frmCadProd: TfrmCadProd
         Text = 'Editar'
         XRadius = 3.000000000000000000
         YRadius = 3.000000000000000000
+        OnClick = cbEdVolClick
       end
       object cbSalvar: TCornerButton
         Align = Right
@@ -146,7 +147,7 @@ object frmCadProd: TfrmCadProd
       Size.Height = 560.000000000000000000
       Size.PlatformDefault = False
       StyleLookup = 'TabControl1Style1'
-      TabIndex = 1
+      TabIndex = 0
       TabOrder = 1
       TabPosition = None
       Sizes = (
@@ -158,7 +159,7 @@ object frmCadProd: TfrmCadProd
         CustomIcon = <
           item
           end>
-        IsSelected = False
+        IsSelected = True
         Size.Width = 8.000000000000000000
         Size.Height = 8.000000000000000000
         Size.PlatformDefault = False
@@ -167,7 +168,7 @@ object frmCadProd: TfrmCadProd
         Text = 'tbiLista'
         ExplicitSize.cx = 69.000000000000000000
         ExplicitSize.cy = 26.000000000000000000
-        object ListView1: TListView
+        object lvCadProd: TListView
           ItemAppearanceClassName = 'TListItemAppearance'
           ItemEditAppearanceClassName = 'TListItemShowCheckAppearance'
           HeaderAppearanceClassName = 'TListHeaderObjects'
@@ -187,7 +188,7 @@ object frmCadProd: TfrmCadProd
         CustomIcon = <
           item
           end>
-        IsSelected = True
+        IsSelected = False
         Size.Width = 8.000000000000000000
         Size.Height = 8.000000000000000000
         Size.PlatformDefault = False

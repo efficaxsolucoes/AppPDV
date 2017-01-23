@@ -3,7 +3,7 @@ object frmCadCli: TfrmCadCli
   Top = 0
   Caption = 'Form1'
   ClientHeight = 600
-  ClientWidth = 800
+  ClientWidth = 801
   Position = DesktopCenter
   StyleBook = StyleBook1
   FormFactor.Width = 320
@@ -12,12 +12,12 @@ object frmCadCli: TfrmCadCli
   DesignerMasterStyle = 0
   object lytBase: TLayout
     Align = Client
-    Size.Width = 800.000000000000000000
+    Size.Width = 801.000000000000000000
     Size.Height = 600.000000000000000000
     Size.PlatformDefault = False
     TabOrder = 0
     object tlbCadCli: TToolBar
-      Size.Width = 800.000000000000000000
+      Size.Width = 801.000000000000000000
       Size.Height = 40.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 2
@@ -31,63 +31,45 @@ object frmCadCli: TfrmCadCli
         StyleLookup = 'detailstoolbutton'
         Text = 'spbBack'
       end
-      object cbEditar: TCornerButton
+      object cbEdVol: TCornerButton
         Align = Right
         Margins.Top = 2.000000000000000000
         Margins.Right = 5.000000000000000000
         Margins.Bottom = 2.000000000000000000
-        Position.X = 545.000000000000000000
-        Position.Y = 2.000000000000000000
-        Sides = [Top, Left, Bottom, Right]
-        Size.Width = 80.000000000000000000
-        Size.Height = 36.000000000000000000
-        Size.PlatformDefault = False
-        TabOrder = 3
-        Text = 'Editar'
-        XRadius = 3.000000000000000000
-        YRadius = 3.000000000000000000
-        OnClick = cbEditarClick
-      end
-      object cbSalvar: TCornerButton
-        Align = Right
-        Margins.Top = 2.000000000000000000
-        Margins.Right = 5.000000000000000000
-        Margins.Bottom = 2.000000000000000000
-        Position.X = 715.000000000000000000
+        Position.X = 546.000000000000000000
         Position.Y = 2.000000000000000000
         Sides = [Top, Left, Bottom, Right]
         Size.Width = 80.000000000000000000
         Size.Height = 36.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 2
-        Text = 'Salvar'
+        Text = 'Editar'
         XRadius = 3.000000000000000000
         YRadius = 3.000000000000000000
+        OnClick = cbEdVolClick
       end
-      object cbVoltar: TCornerButton
+      object cbSalvar: TCornerButton
         Align = Right
         Margins.Top = 2.000000000000000000
         Margins.Right = 5.000000000000000000
         Margins.Bottom = 2.000000000000000000
-        Position.X = 435.000000000000000000
+        Position.X = 716.000000000000000000
         Position.Y = 2.000000000000000000
         Sides = [Top, Left, Bottom, Right]
         Size.Width = 80.000000000000000000
         Size.Height = 36.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 1
-        Text = 'Voltar'
-        Visible = False
+        Text = 'Salvar'
         XRadius = 3.000000000000000000
         YRadius = 3.000000000000000000
-        OnClick = cbVoltarClick
       end
       object cbApagar: TCornerButton
         Align = Right
         Margins.Top = 2.000000000000000000
         Margins.Right = 5.000000000000000000
         Margins.Bottom = 2.000000000000000000
-        Position.X = 630.000000000000000000
+        Position.X = 631.000000000000000000
         Position.Y = 2.000000000000000000
         Sides = [Top, Left, Bottom, Right]
         Size.Width = 80.000000000000000000
@@ -101,23 +83,23 @@ object frmCadCli: TfrmCadCli
     end
     object tbCadCli: TTabControl
       Align = Client
-      Size.Width = 800.000000000000000000
+      Size.Width = 801.000000000000000000
       Size.Height = 560.000000000000000000
       Size.PlatformDefault = False
       StyleLookup = 'TabControl1Style1'
-      TabIndex = 1
+      TabIndex = 0
       TabOrder = 1
       TabPosition = None
       Sizes = (
-        800s
+        801s
         560s
-        800s
+        801s
         560s)
       object tbiLista: TTabItem
         CustomIcon = <
           item
           end>
-        IsSelected = False
+        IsSelected = True
         Size.Width = 8.000000000000000000
         Size.Height = 8.000000000000000000
         Size.PlatformDefault = False
@@ -126,7 +108,7 @@ object frmCadCli: TfrmCadCli
         Text = 'tbiLista'
         ExplicitSize.cx = 69.000000000000000000
         ExplicitSize.cy = 26.000000000000000000
-        object ListView1: TListView
+        object lvCadCli: TListView
           ItemAppearanceClassName = 'TListItemAppearance'
           ItemEditAppearanceClassName = 'TListItemShowCheckAppearance'
           HeaderAppearanceClassName = 'TListHeaderObjects'
@@ -136,7 +118,7 @@ object frmCadCli: TfrmCadCli
           Margins.Top = 5.000000000000000000
           Margins.Right = 5.000000000000000000
           Margins.Bottom = 5.000000000000000000
-          Size.Width = 790.000000000000000000
+          Size.Width = 791.000000000000000000
           Size.Height = 550.000000000000000000
           Size.PlatformDefault = False
           TabOrder = 0
@@ -146,7 +128,7 @@ object frmCadCli: TfrmCadCli
         CustomIcon = <
           item
           end>
-        IsSelected = True
+        IsSelected = False
         Size.Width = 8.000000000000000000
         Size.Height = 8.000000000000000000
         Size.PlatformDefault = False
@@ -157,7 +139,7 @@ object frmCadCli: TfrmCadCli
         ExplicitSize.cy = 26.000000000000000000
         object lbxCadCli: TListBox
           Align = Client
-          Size.Width = 800.000000000000000000
+          Size.Width = 801.000000000000000000
           Size.Height = 560.000000000000000000
           Size.PlatformDefault = False
           StyleLookup = 'transparentlistboxstyle'
@@ -166,7 +148,7 @@ object frmCadCli: TfrmCadCli
           DefaultItemStyles.ItemStyle = ''
           DefaultItemStyles.GroupHeaderStyle = ''
           DefaultItemStyles.GroupFooterStyle = ''
-          Viewport.Width = 784.000000000000000000
+          Viewport.Width = 785.000000000000000000
           Viewport.Height = 560.000000000000000000
           object lbghDadosCli: TListBoxGroupHeader
             TextSettings.HorzAlign = Center
@@ -174,7 +156,7 @@ object frmCadCli: TfrmCadCli
             Margins.Top = 3.000000000000000000
             Margins.Bottom = 2.000000000000000000
             Position.Y = 3.000000000000000000
-            Size.Width = 784.000000000000000000
+            Size.Width = 785.000000000000000000
             Size.Height = 35.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 0
@@ -186,7 +168,7 @@ object frmCadCli: TfrmCadCli
             Margins.Top = 3.000000000000000000
             Margins.Bottom = 2.000000000000000000
             Position.Y = 43.000000000000000000
-            Size.Width = 784.000000000000000000
+            Size.Width = 785.000000000000000000
             Size.Height = 25.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 1
@@ -221,7 +203,7 @@ object frmCadCli: TfrmCadCli
             Margins.Top = 3.000000000000000000
             Margins.Bottom = 2.000000000000000000
             Position.Y = 73.000000000000000000
-            Size.Width = 784.000000000000000000
+            Size.Width = 785.000000000000000000
             Size.Height = 25.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 4
@@ -255,7 +237,7 @@ object frmCadCli: TfrmCadCli
             Margins.Top = 3.000000000000000000
             Margins.Bottom = 2.000000000000000000
             Position.Y = 103.000000000000000000
-            Size.Width = 784.000000000000000000
+            Size.Width = 785.000000000000000000
             Size.Height = 25.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 2
@@ -277,7 +259,7 @@ object frmCadCli: TfrmCadCli
               TabOrder = 2
               Margins.Left = 10.000000000000000000
               Margins.Right = 15.000000000000000000
-              Size.Width = 718.000000000000000000
+              Size.Width = 719.000000000000000000
               Size.Height = 21.000000000000000000
               Size.PlatformDefault = False
             end
@@ -288,7 +270,7 @@ object frmCadCli: TfrmCadCli
             Margins.Top = 3.000000000000000000
             Margins.Bottom = 2.000000000000000000
             Position.Y = 133.000000000000000000
-            Size.Width = 784.000000000000000000
+            Size.Width = 785.000000000000000000
             Size.Height = 25.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 3
@@ -322,7 +304,7 @@ object frmCadCli: TfrmCadCli
             Margins.Top = 3.000000000000000000
             Margins.Bottom = 2.000000000000000000
             Position.Y = 163.000000000000000000
-            Size.Width = 784.000000000000000000
+            Size.Width = 785.000000000000000000
             Size.Height = 25.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 5
@@ -354,7 +336,7 @@ object frmCadCli: TfrmCadCli
             Margins.Top = 3.000000000000000000
             Margins.Bottom = 2.000000000000000000
             Position.Y = 193.000000000000000000
-            Size.Width = 784.000000000000000000
+            Size.Width = 785.000000000000000000
             Size.Height = 25.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 6
@@ -386,7 +368,7 @@ object frmCadCli: TfrmCadCli
             Margins.Top = 3.000000000000000000
             Margins.Bottom = 2.000000000000000000
             Position.Y = 223.000000000000000000
-            Size.Width = 784.000000000000000000
+            Size.Width = 785.000000000000000000
             Size.Height = 25.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 7
@@ -420,7 +402,7 @@ object frmCadCli: TfrmCadCli
             Margins.Top = 3.000000000000000000
             Margins.Bottom = 2.000000000000000000
             Position.Y = 253.000000000000000000
-            Size.Width = 784.000000000000000000
+            Size.Width = 785.000000000000000000
             Size.Height = 35.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 8
@@ -490,7 +472,7 @@ object frmCadCli: TfrmCadCli
             Margins.Top = 3.000000000000000000
             Margins.Bottom = 2.000000000000000000
             Position.Y = 293.000000000000000000
-            Size.Width = 784.000000000000000000
+            Size.Width = 785.000000000000000000
             Size.Height = 25.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 10
@@ -524,7 +506,7 @@ object frmCadCli: TfrmCadCli
             Margins.Top = 3.000000000000000000
             Margins.Bottom = 2.000000000000000000
             Position.Y = 323.000000000000000000
-            Size.Width = 784.000000000000000000
+            Size.Width = 785.000000000000000000
             Size.Height = 25.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 11
@@ -558,7 +540,7 @@ object frmCadCli: TfrmCadCli
             Margins.Top = 3.000000000000000000
             Margins.Bottom = 2.000000000000000000
             Position.Y = 353.000000000000000000
-            Size.Width = 784.000000000000000000
+            Size.Width = 785.000000000000000000
             Size.Height = 25.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 12
@@ -590,7 +572,7 @@ object frmCadCli: TfrmCadCli
             Margins.Top = 3.000000000000000000
             Margins.Bottom = 2.000000000000000000
             Position.Y = 383.000000000000000000
-            Size.Width = 784.000000000000000000
+            Size.Width = 785.000000000000000000
             Size.Height = 25.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 13
@@ -646,7 +628,7 @@ object frmCadCli: TfrmCadCli
             Margins.Top = 3.000000000000000000
             Margins.Bottom = 2.000000000000000000
             Position.Y = 413.000000000000000000
-            Size.Width = 784.000000000000000000
+            Size.Width = 785.000000000000000000
             Size.Height = 50.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 14
@@ -656,7 +638,7 @@ object frmCadCli: TfrmCadCli
               Margins.Top = 2.000000000000000000
               Margins.Right = 10.000000000000000000
               Margins.Bottom = 2.000000000000000000
-              Position.X = 654.000000000000000000
+              Position.X = 655.000000000000000000
               Position.Y = 2.000000000000000000
               Sides = [Top, Left, Bottom, Right]
               Size.Width = 120.000000000000000000
@@ -675,7 +657,7 @@ object frmCadCli: TfrmCadCli
             Margins.Top = 3.000000000000000000
             Margins.Bottom = 2.000000000000000000
             Position.Y = 468.000000000000000000
-            Size.Width = 784.000000000000000000
+            Size.Width = 785.000000000000000000
             Size.Height = 35.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 15
@@ -687,7 +669,7 @@ object frmCadCli: TfrmCadCli
             Margins.Top = 3.000000000000000000
             Margins.Bottom = 2.000000000000000000
             Position.Y = 508.000000000000000000
-            Size.Width = 784.000000000000000000
+            Size.Width = 785.000000000000000000
             Size.Height = 25.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 16
@@ -721,7 +703,7 @@ object frmCadCli: TfrmCadCli
             Margins.Top = 3.000000000000000000
             Margins.Bottom = 2.000000000000000000
             Position.Y = 538.000000000000000000
-            Size.Width = 784.000000000000000000
+            Size.Width = 785.000000000000000000
             Size.Height = 25.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 17
@@ -755,7 +737,7 @@ object frmCadCli: TfrmCadCli
             Margins.Top = 3.000000000000000000
             Margins.Bottom = 2.000000000000000000
             Position.Y = 568.000000000000000000
-            Size.Width = 784.000000000000000000
+            Size.Width = 785.000000000000000000
             Size.Height = 25.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 18
@@ -789,7 +771,7 @@ object frmCadCli: TfrmCadCli
             Margins.Top = 3.000000000000000000
             Margins.Bottom = 2.000000000000000000
             Position.Y = 598.000000000000000000
-            Size.Width = 784.000000000000000000
+            Size.Width = 785.000000000000000000
             Size.Height = 25.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 19
@@ -823,7 +805,7 @@ object frmCadCli: TfrmCadCli
             Margins.Top = 3.000000000000000000
             Margins.Bottom = 2.000000000000000000
             Position.Y = 628.000000000000000000
-            Size.Width = 784.000000000000000000
+            Size.Width = 785.000000000000000000
             Size.Height = 25.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 20
@@ -879,7 +861,7 @@ object frmCadCli: TfrmCadCli
             Margins.Top = 3.000000000000000000
             Margins.Bottom = 2.000000000000000000
             Position.Y = 658.000000000000000000
-            Size.Width = 784.000000000000000000
+            Size.Width = 785.000000000000000000
             Size.Height = 50.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 21
@@ -889,7 +871,7 @@ object frmCadCli: TfrmCadCli
               Margins.Top = 2.000000000000000000
               Margins.Right = 10.000000000000000000
               Margins.Bottom = 2.000000000000000000
-              Position.X = 654.000000000000000000
+              Position.X = 655.000000000000000000
               Position.Y = 2.000000000000000000
               Sides = [Top, Left, Bottom, Right]
               Size.Width = 120.000000000000000000
