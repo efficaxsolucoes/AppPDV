@@ -1,11 +1,9 @@
-object frmCadCli: TfrmCadCli
+object frmCadLoj: TfrmCadLoj
   Left = 0
   Top = 0
   Caption = 'Form1'
   ClientHeight = 600
   ClientWidth = 800
-  Position = DesktopCenter
-  StyleBook = StyleBook1
   FormFactor.Width = 320
   FormFactor.Height = 480
   FormFactor.Devices = [Desktop]
@@ -16,7 +14,7 @@ object frmCadCli: TfrmCadCli
     Size.Height = 600.000000000000000000
     Size.PlatformDefault = False
     TabOrder = 0
-    object tlbCadCli: TToolBar
+    object tlbCadLoj: TToolBar
       Size.Width = 800.000000000000000000
       Size.Height = 40.000000000000000000
       Size.PlatformDefault = False
@@ -46,7 +44,6 @@ object frmCadCli: TfrmCadCli
         Text = 'Editar'
         XRadius = 3.000000000000000000
         YRadius = 3.000000000000000000
-        OnClick = cbEditarClick
       end
       object cbSalvar: TCornerButton
         Align = Right
@@ -80,7 +77,6 @@ object frmCadCli: TfrmCadCli
         Visible = False
         XRadius = 3.000000000000000000
         YRadius = 3.000000000000000000
-        OnClick = cbVoltarClick
       end
       object cbApagar: TCornerButton
         Align = Right
@@ -99,7 +95,7 @@ object frmCadCli: TfrmCadCli
         YRadius = 3.000000000000000000
       end
     end
-    object tbCadCli: TTabControl
+    object tbCadLoj: TTabControl
       Align = Client
       Size.Width = 800.000000000000000000
       Size.Height = 560.000000000000000000
@@ -126,7 +122,7 @@ object frmCadCli: TfrmCadCli
         Text = 'tbiLista'
         ExplicitSize.cx = 69.000000000000000000
         ExplicitSize.cy = 26.000000000000000000
-        object ListView1: TListView
+        object lvCadLoja: TListView
           ItemAppearanceClassName = 'TListItemAppearance'
           ItemEditAppearanceClassName = 'TListItemShowCheckAppearance'
           HeaderAppearanceClassName = 'TListHeaderObjects'
@@ -155,7 +151,7 @@ object frmCadCli: TfrmCadCli
         Text = 'tbiDad'
         ExplicitSize.cx = 69.000000000000000000
         ExplicitSize.cy = 26.000000000000000000
-        object lbxCadCli: TListBox
+        object lbxCadLoj: TListBox
           Align = Client
           Size.Width = 800.000000000000000000
           Size.Height = 560.000000000000000000
@@ -180,7 +176,7 @@ object frmCadCli: TfrmCadCli
             TabOrder = 0
             Text = 'Dados B'#225'sicos'
           end
-          object lbiTipo: TListBoxItem
+          object lbiLCnpj: TListBoxItem
             Padding.Top = 2.000000000000000000
             Padding.Bottom = 2.000000000000000000
             Margins.Top = 3.000000000000000000
@@ -189,33 +185,32 @@ object frmCadCli: TfrmCadCli
             Size.Width = 784.000000000000000000
             Size.Height = 25.000000000000000000
             Size.PlatformDefault = False
-            TabOrder = 1
-            object lbPJur: TLabel
+            TabOrder = 3
+            object lbLCnpj: TLabel
               Align = Left
               AutoSize = True
               Margins.Left = 5.000000000000000000
               Position.X = 5.000000000000000000
               Position.Y = 2.000000000000000000
-              Size.Width = 82.000000000000000000
+              Size.Width = 30.000000000000000000
               Size.Height = 21.000000000000000000
               Size.PlatformDefault = False
               TextSettings.WordWrap = False
-              Text = 'Pessoa Jur'#237'dica:'
+              Text = 'CNPJ:'
             end
-            object swtPesJur: TSwitch
+            object edtLCnpj: TEdit
+              Touch.InteractiveGestures = [LongTap, DoubleTap]
               Align = Left
-              IsChecked = False
-              Margins.Left = 10.000000000000000000
-              Position.X = 97.000000000000000000
+              TabOrder = 2
+              Position.X = 45.000000000000000000
               Position.Y = 2.000000000000000000
-              Size.Width = 43.000000000000000000
+              Margins.Left = 10.000000000000000000
+              Size.Width = 155.000000000000000000
               Size.Height = 21.000000000000000000
               Size.PlatformDefault = False
-              TabOrder = 2
-              OnSwitch = swtPesJurSwitch
             end
           end
-          object lbiCpCn: TListBoxItem
+          object lbiLRazSoc: TListBoxItem
             Padding.Top = 2.000000000000000000
             Padding.Bottom = 2.000000000000000000
             Margins.Top = 3.000000000000000000
@@ -224,32 +219,31 @@ object frmCadCli: TfrmCadCli
             Size.Width = 784.000000000000000000
             Size.Height = 25.000000000000000000
             Size.PlatformDefault = False
-            TabOrder = 4
-            object lbCpCn: TLabel
+            TabOrder = 1
+            object lbLRazSoc: TLabel
               Align = Left
               AutoSize = True
               Margins.Left = 5.000000000000000000
               Position.X = 5.000000000000000000
               Position.Y = 2.000000000000000000
-              Size.Width = 23.000000000000000000
+              Size.Width = 69.000000000000000000
               Size.Height = 21.000000000000000000
               Size.PlatformDefault = False
               TextSettings.WordWrap = False
-              Text = 'CPF:'
+              Text = 'Raz'#227'o Social:'
             end
-            object edtCpCn: TEdit
+            object edtLRazSoc: TEdit
               Touch.InteractiveGestures = [LongTap, DoubleTap]
-              Align = Left
+              Align = Client
               TabOrder = 2
-              Position.X = 38.000000000000000000
-              Position.Y = 2.000000000000000000
               Margins.Left = 10.000000000000000000
-              Size.Width = 155.000000000000000000
+              Margins.Right = 15.000000000000000000
+              Size.Width = 685.000000000000000000
               Size.Height = 21.000000000000000000
               Size.PlatformDefault = False
             end
           end
-          object lbiNomRazSoc: TListBoxItem
+          object lbiLNomFant: TListBoxItem
             Padding.Top = 2.000000000000000000
             Padding.Bottom = 2.000000000000000000
             Margins.Top = 3.000000000000000000
@@ -259,30 +253,31 @@ object frmCadCli: TfrmCadCli
             Size.Height = 25.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 2
-            object lbNoRazSoc: TLabel
+            object lbLNomFant: TLabel
               Align = Left
               AutoSize = True
               Margins.Left = 5.000000000000000000
               Position.X = 5.000000000000000000
               Position.Y = 2.000000000000000000
-              Size.Width = 36.000000000000000000
+              Size.Width = 79.000000000000000000
               Size.Height = 21.000000000000000000
               Size.PlatformDefault = False
               TextSettings.WordWrap = False
-              Text = 'Nome:'
+              Text = 'Nome Fantasia'
             end
-            object edtNoRazSoc: TEdit
+            object edtLNomFant: TEdit
               Touch.InteractiveGestures = [LongTap, DoubleTap]
-              Align = Client
+              Align = Left
               TabOrder = 2
+              Position.X = 94.000000000000000000
+              Position.Y = 2.000000000000000000
               Margins.Left = 10.000000000000000000
-              Margins.Right = 15.000000000000000000
-              Size.Width = 718.000000000000000000
+              Size.Width = 216.000000000000000000
               Size.Height = 21.000000000000000000
               Size.PlatformDefault = False
             end
           end
-          object lbiApeNomFant: TListBoxItem
+          object lbiLInsc: TListBoxItem
             Padding.Top = 2.000000000000000000
             Padding.Bottom = 2.000000000000000000
             Margins.Top = 3.000000000000000000
@@ -291,127 +286,29 @@ object frmCadCli: TfrmCadCli
             Size.Width = 784.000000000000000000
             Size.Height = 25.000000000000000000
             Size.PlatformDefault = False
-            TabOrder = 3
-            object lbApeNomFant: TLabel
+            TabOrder = 4
+            object lbLInsc: TLabel
               Align = Left
               AutoSize = True
               Margins.Left = 5.000000000000000000
               Position.X = 5.000000000000000000
               Position.Y = 2.000000000000000000
-              Size.Width = 44.000000000000000000
+              Size.Width = 97.000000000000000000
               Size.Height = 21.000000000000000000
               Size.PlatformDefault = False
               TextSettings.WordWrap = False
-              Text = 'Apelido:'
+              Text = 'Inscri'#231#227'o Estadual:'
             end
-            object edtApeNomFant: TEdit
+            object edtLInsc: TEdit
               Touch.InteractiveGestures = [LongTap, DoubleTap]
               Align = Left
               TabOrder = 2
-              Position.X = 59.000000000000000000
-              Position.Y = 2.000000000000000000
-              Margins.Left = 10.000000000000000000
-              Size.Width = 216.000000000000000000
-              Size.Height = 21.000000000000000000
-              Size.PlatformDefault = False
-            end
-          end
-          object lbiRgInsc: TListBoxItem
-            Padding.Top = 2.000000000000000000
-            Padding.Bottom = 2.000000000000000000
-            Margins.Top = 3.000000000000000000
-            Margins.Bottom = 2.000000000000000000
-            Position.Y = 163.000000000000000000
-            Size.Width = 784.000000000000000000
-            Size.Height = 25.000000000000000000
-            Size.PlatformDefault = False
-            TabOrder = 5
-            object lbRgInsc: TLabel
-              Align = Left
-              AutoSize = True
-              Margins.Left = 5.000000000000000000
-              Position.X = 5.000000000000000000
-              Position.Y = 2.000000000000000000
-              Size.Width = 17.000000000000000000
-              Size.Height = 21.000000000000000000
-              Size.PlatformDefault = False
-              TextSettings.WordWrap = False
-              Text = 'Rg:'
-            end
-            object edtRgInsc: TEdit
-              Touch.InteractiveGestures = [LongTap, DoubleTap]
-              Align = Left
-              TabOrder = 2
-              Position.X = 32.000000000000000000
+              Position.X = 112.000000000000000000
               Position.Y = 2.000000000000000000
               Margins.Left = 10.000000000000000000
               Size.Width = 155.000000000000000000
               Size.Height = 21.000000000000000000
               Size.PlatformDefault = False
-            end
-          end
-          object lbiOgUf: TListBoxItem
-            Margins.Top = 3.000000000000000000
-            Margins.Bottom = 2.000000000000000000
-            Position.Y = 193.000000000000000000
-            Size.Width = 784.000000000000000000
-            Size.Height = 25.000000000000000000
-            Size.PlatformDefault = False
-            TabOrder = 6
-            object lbOgUf: TLabel
-              Align = Left
-              Margins.Left = 5.000000000000000000
-              Position.X = 5.000000000000000000
-              Size.Width = 103.000000000000000000
-              Size.Height = 25.000000000000000000
-              Size.PlatformDefault = False
-              TextSettings.WordWrap = False
-              Text = 'Org'#227'o Emissor/UF:'
-            end
-            object edtOgUf: TEdit
-              Touch.InteractiveGestures = [LongTap, DoubleTap]
-              Align = Left
-              TabOrder = 2
-              Position.X = 113.000000000000000000
-              Position.Y = 2.000000000000000000
-              Margins.Left = 5.000000000000000000
-              Margins.Top = 2.000000000000000000
-              Margins.Bottom = 2.000000000000000000
-              Size.Width = 155.000000000000000000
-              Size.Height = 21.000000000000000000
-              Size.PlatformDefault = False
-            end
-          end
-          object lbiNasc: TListBoxItem
-            Margins.Top = 3.000000000000000000
-            Margins.Bottom = 2.000000000000000000
-            Position.Y = 223.000000000000000000
-            Size.Width = 784.000000000000000000
-            Size.Height = 25.000000000000000000
-            Size.PlatformDefault = False
-            TabOrder = 7
-            object lbNasc: TLabel
-              Align = Left
-              Margins.Left = 5.000000000000000000
-              Position.X = 5.000000000000000000
-              Size.Width = 115.000000000000000000
-              Size.Height = 25.000000000000000000
-              Size.PlatformDefault = False
-              TextSettings.WordWrap = False
-              Text = 'Data de Nascimento:'
-            end
-            object dedtNasc: TDateEdit
-              Date = 32874.000000000000000000
-              Align = Left
-              Margins.Left = 5.000000000000000000
-              Margins.Top = 2.000000000000000000
-              Margins.Bottom = 2.000000000000000000
-              Position.X = 125.000000000000000000
-              Position.Y = 2.000000000000000000
-              Size.Width = 100.000000000000000000
-              Size.Height = 21.000000000000000000
-              Size.PlatformDefault = False
-              TabOrder = 2
             end
           end
           object lbghCont: TListBoxGroupHeader
@@ -419,25 +316,24 @@ object frmCadCli: TfrmCadCli
             StyledSettings = [Family, Size, Style, FontColor]
             Margins.Top = 3.000000000000000000
             Margins.Bottom = 2.000000000000000000
-            Position.Y = 253.000000000000000000
+            Position.Y = 163.000000000000000000
             Size.Width = 784.000000000000000000
             Size.Height = 35.000000000000000000
             Size.PlatformDefault = False
-            TabOrder = 8
+            TabOrder = 5
             Text = 'Contato'
           end
-          object lbiNome: TListBoxItem
+          object lbiLNomCont: TListBoxItem
             Padding.Top = 2.000000000000000000
             Padding.Bottom = 2.000000000000000000
             Margins.Top = 3.000000000000000000
             Margins.Bottom = 2.000000000000000000
-            Position.Y = 293.000000000000000000
+            Position.Y = 203.000000000000000000
             Size.Width = 784.000000000000000000
             Size.Height = 25.000000000000000000
             Size.PlatformDefault = False
-            TabOrder = 9
-            Visible = False
-            object lbNome: TLabel
+            TabOrder = 6
+            object lbLNomCont: TLabel
               Align = Left
               AutoSize = True
               Margins.Left = 5.000000000000000000
@@ -449,7 +345,7 @@ object frmCadCli: TfrmCadCli
               TextSettings.WordWrap = False
               Text = 'Nome:'
             end
-            object edtNomCont: TEdit
+            object edtLNomCont: TEdit
               Touch.InteractiveGestures = [LongTap, DoubleTap]
               Align = Left
               TabOrder = 2
@@ -484,17 +380,17 @@ object frmCadCli: TfrmCadCli
               TabOrder = 1
             end
           end
-          object lbiFixo: TListBoxItem
+          object lbiLFixo: TListBoxItem
             Padding.Top = 2.000000000000000000
             Padding.Bottom = 2.000000000000000000
             Margins.Top = 3.000000000000000000
             Margins.Bottom = 2.000000000000000000
-            Position.Y = 293.000000000000000000
+            Position.Y = 233.000000000000000000
             Size.Width = 784.000000000000000000
             Size.Height = 25.000000000000000000
             Size.PlatformDefault = False
-            TabOrder = 10
-            object lbFixo: TLabel
+            TabOrder = 7
+            object lbLFixo: TLabel
               Align = Left
               AutoSize = True
               Margins.Left = 5.000000000000000000
@@ -506,7 +402,7 @@ object frmCadCli: TfrmCadCli
               TextSettings.WordWrap = False
               Text = 'Fixo:'
             end
-            object edtFixo: TEdit
+            object edtLFixo: TEdit
               Touch.InteractiveGestures = [LongTap, DoubleTap]
               Align = Left
               TabOrder = 1
@@ -518,17 +414,17 @@ object frmCadCli: TfrmCadCli
               Size.PlatformDefault = False
             end
           end
-          object lbiCelular: TListBoxItem
+          object lbiLCell: TListBoxItem
             Padding.Top = 2.000000000000000000
             Padding.Bottom = 2.000000000000000000
             Margins.Top = 3.000000000000000000
             Margins.Bottom = 2.000000000000000000
-            Position.Y = 323.000000000000000000
+            Position.Y = 263.000000000000000000
             Size.Width = 784.000000000000000000
             Size.Height = 25.000000000000000000
             Size.PlatformDefault = False
-            TabOrder = 11
-            object lbCelular: TLabel
+            TabOrder = 8
+            object lbLCelular: TLabel
               Align = Left
               AutoSize = True
               Margins.Left = 5.000000000000000000
@@ -540,7 +436,7 @@ object frmCadCli: TfrmCadCli
               TextSettings.WordWrap = False
               Text = 'Celular:'
             end
-            object edtCell: TEdit
+            object edtLCell: TEdit
               Touch.InteractiveGestures = [LongTap, DoubleTap]
               Align = Left
               TabOrder = 1
@@ -552,17 +448,17 @@ object frmCadCli: TfrmCadCli
               Size.PlatformDefault = False
             end
           end
-          object lbiEmail: TListBoxItem
+          object lbiLEmail: TListBoxItem
             Padding.Top = 2.000000000000000000
             Padding.Bottom = 2.000000000000000000
             Margins.Top = 3.000000000000000000
             Margins.Bottom = 2.000000000000000000
-            Position.Y = 353.000000000000000000
+            Position.Y = 293.000000000000000000
             Size.Width = 784.000000000000000000
             Size.Height = 25.000000000000000000
             Size.PlatformDefault = False
-            TabOrder = 12
-            object lbEmail: TLabel
+            TabOrder = 9
+            object lbLEmail: TLabel
               Align = Left
               AutoSize = True
               Margins.Left = 5.000000000000000000
@@ -574,7 +470,7 @@ object frmCadCli: TfrmCadCli
               TextSettings.WordWrap = False
               Text = 'E-mail'
             end
-            object edtEmail: TEdit
+            object edtLEmail: TEdit
               Touch.InteractiveGestures = [LongTap, DoubleTap]
               Align = Left
               TabOrder = 1
@@ -586,71 +482,16 @@ object frmCadCli: TfrmCadCli
               Size.PlatformDefault = False
             end
           end
-          object lbiRec: TListBoxItem
-            Margins.Top = 3.000000000000000000
-            Margins.Bottom = 2.000000000000000000
-            Position.Y = 383.000000000000000000
-            Size.Width = 784.000000000000000000
-            Size.Height = 25.000000000000000000
-            Size.PlatformDefault = False
-            TabOrder = 13
-            object lbTRec: TLabel
-              Align = Left
-              Margins.Left = 5.000000000000000000
-              Position.X = 5.000000000000000000
-              Size.Width = 76.000000000000000000
-              Size.Height = 25.000000000000000000
-              Size.PlatformDefault = False
-              TextSettings.WordWrap = False
-              Text = 'Tel. Recado:'
-            end
-            object edtTelRec: TEdit
-              Touch.InteractiveGestures = [LongTap, DoubleTap]
-              Align = Left
-              TabOrder = 2
-              Position.X = 86.000000000000000000
-              Position.Y = 2.000000000000000000
-              Margins.Left = 5.000000000000000000
-              Margins.Top = 2.000000000000000000
-              Margins.Bottom = 2.000000000000000000
-              Size.Width = 155.000000000000000000
-              Size.Height = 21.000000000000000000
-              Size.PlatformDefault = False
-            end
-            object lbFaCom: TLabel
-              Align = Left
-              Margins.Left = 15.000000000000000000
-              Position.X = 256.000000000000000000
-              Size.Width = 67.000000000000000000
-              Size.Height = 25.000000000000000000
-              Size.PlatformDefault = False
-              TextSettings.WordWrap = False
-              Text = 'Falar Com:'
-            end
-            object edtFalCom: TEdit
-              Touch.InteractiveGestures = [LongTap, DoubleTap]
-              Align = Left
-              TabOrder = 1
-              Position.X = 328.000000000000000000
-              Position.Y = 2.000000000000000000
-              Margins.Left = 5.000000000000000000
-              Margins.Top = 2.000000000000000000
-              Margins.Bottom = 2.000000000000000000
-              Size.Width = 155.000000000000000000
-              Size.Height = 21.000000000000000000
-              Size.PlatformDefault = False
-            end
-          end
           object lbiAddCont: TListBoxItem
             Selectable = False
             Margins.Top = 3.000000000000000000
             Margins.Bottom = 2.000000000000000000
-            Position.Y = 413.000000000000000000
+            Position.Y = 323.000000000000000000
             Size.Width = 784.000000000000000000
             Size.Height = 50.000000000000000000
             Size.PlatformDefault = False
-            TabOrder = 14
-            object cbAddCont: TCornerButton
+            TabOrder = 10
+            object cbLAddCont: TCornerButton
               Align = Right
               Margins.Left = 2.000000000000000000
               Margins.Top = 2.000000000000000000
@@ -674,24 +515,24 @@ object frmCadCli: TfrmCadCli
             StyledSettings = [Family, Size, Style, FontColor]
             Margins.Top = 3.000000000000000000
             Margins.Bottom = 2.000000000000000000
-            Position.Y = 468.000000000000000000
+            Position.Y = 378.000000000000000000
             Size.Width = 784.000000000000000000
             Size.Height = 35.000000000000000000
             Size.PlatformDefault = False
-            TabOrder = 15
+            TabOrder = 11
             Text = 'Endere'#231'o'
           end
-          object lbiCep: TListBoxItem
+          object lbiLCep: TListBoxItem
             Padding.Top = 2.000000000000000000
             Padding.Bottom = 2.000000000000000000
             Margins.Top = 3.000000000000000000
             Margins.Bottom = 2.000000000000000000
-            Position.Y = 508.000000000000000000
+            Position.Y = 418.000000000000000000
             Size.Width = 784.000000000000000000
             Size.Height = 25.000000000000000000
             Size.PlatformDefault = False
-            TabOrder = 16
-            object lbCep: TLabel
+            TabOrder = 12
+            object lbLCep: TLabel
               Align = Left
               AutoSize = True
               Margins.Left = 5.000000000000000000
@@ -703,7 +544,7 @@ object frmCadCli: TfrmCadCli
               TextSettings.WordWrap = False
               Text = 'Cep:'
             end
-            object edtCep: TEdit
+            object edtLCep: TEdit
               Touch.InteractiveGestures = [LongTap, DoubleTap]
               Align = Left
               TabOrder = 0
@@ -715,17 +556,17 @@ object frmCadCli: TfrmCadCli
               Size.PlatformDefault = False
             end
           end
-          object lbiEstado: TListBoxItem
+          object lbiLEstado: TListBoxItem
             Padding.Top = 2.000000000000000000
             Padding.Bottom = 2.000000000000000000
             Margins.Top = 3.000000000000000000
             Margins.Bottom = 2.000000000000000000
-            Position.Y = 538.000000000000000000
+            Position.Y = 448.000000000000000000
             Size.Width = 784.000000000000000000
             Size.Height = 25.000000000000000000
             Size.PlatformDefault = False
-            TabOrder = 17
-            object lbEstado: TLabel
+            TabOrder = 13
+            object lbLEstado: TLabel
               Align = Left
               AutoSize = True
               Margins.Left = 5.000000000000000000
@@ -737,7 +578,7 @@ object frmCadCli: TfrmCadCli
               TextSettings.WordWrap = False
               Text = 'Estado:'
             end
-            object edtEstado: TEdit
+            object edtLEstado: TEdit
               Touch.InteractiveGestures = [LongTap, DoubleTap]
               Align = Left
               TabOrder = 0
@@ -749,17 +590,17 @@ object frmCadCli: TfrmCadCli
               Size.PlatformDefault = False
             end
           end
-          object lbiCidade: TListBoxItem
+          object lbiLCidade: TListBoxItem
             Padding.Top = 2.000000000000000000
             Padding.Bottom = 2.000000000000000000
             Margins.Top = 3.000000000000000000
             Margins.Bottom = 2.000000000000000000
-            Position.Y = 568.000000000000000000
+            Position.Y = 478.000000000000000000
             Size.Width = 784.000000000000000000
             Size.Height = 25.000000000000000000
             Size.PlatformDefault = False
-            TabOrder = 18
-            object lbCidade: TLabel
+            TabOrder = 14
+            object lbLCidade: TLabel
               Align = Left
               AutoSize = True
               Margins.Left = 5.000000000000000000
@@ -771,7 +612,7 @@ object frmCadCli: TfrmCadCli
               TextSettings.WordWrap = False
               Text = 'Cidade:'
             end
-            object edtCidade: TEdit
+            object edtLCidade: TEdit
               Touch.InteractiveGestures = [LongTap, DoubleTap]
               Align = Left
               TabOrder = 0
@@ -783,17 +624,17 @@ object frmCadCli: TfrmCadCli
               Size.PlatformDefault = False
             end
           end
-          object lbiBairro: TListBoxItem
+          object lbiLBairro: TListBoxItem
             Padding.Top = 2.000000000000000000
             Padding.Bottom = 2.000000000000000000
             Margins.Top = 3.000000000000000000
             Margins.Bottom = 2.000000000000000000
-            Position.Y = 598.000000000000000000
+            Position.Y = 508.000000000000000000
             Size.Width = 784.000000000000000000
             Size.Height = 25.000000000000000000
             Size.PlatformDefault = False
-            TabOrder = 19
-            object lbBairro: TLabel
+            TabOrder = 15
+            object lbLBairro: TLabel
               Align = Left
               AutoSize = True
               Margins.Left = 5.000000000000000000
@@ -805,7 +646,7 @@ object frmCadCli: TfrmCadCli
               TextSettings.WordWrap = False
               Text = 'Bairro:'
             end
-            object edtBairro: TEdit
+            object edtLBairro: TEdit
               Touch.InteractiveGestures = [LongTap, DoubleTap]
               Align = Left
               TabOrder = 0
@@ -817,17 +658,17 @@ object frmCadCli: TfrmCadCli
               Size.PlatformDefault = False
             end
           end
-          object lbiRua: TListBoxItem
+          object lbiLRua: TListBoxItem
             Padding.Top = 2.000000000000000000
             Padding.Bottom = 2.000000000000000000
             Margins.Top = 3.000000000000000000
             Margins.Bottom = 2.000000000000000000
-            Position.Y = 628.000000000000000000
+            Position.Y = 538.000000000000000000
             Size.Width = 784.000000000000000000
             Size.Height = 25.000000000000000000
             Size.PlatformDefault = False
-            TabOrder = 20
-            object lbRua: TLabel
+            TabOrder = 16
+            object lbLRua: TLabel
               Align = Left
               AutoSize = True
               Margins.Left = 5.000000000000000000
@@ -839,7 +680,7 @@ object frmCadCli: TfrmCadCli
               TextSettings.WordWrap = False
               Text = 'Rua:'
             end
-            object edtRua: TEdit
+            object edtLRua: TEdit
               Touch.InteractiveGestures = [LongTap, DoubleTap]
               Align = Left
               TabOrder = 1
@@ -850,7 +691,7 @@ object frmCadCli: TfrmCadCli
               Size.Height = 21.000000000000000000
               Size.PlatformDefault = False
             end
-            object lbNum: TLabel
+            object lbLNum: TLabel
               Align = Left
               AutoSize = True
               Margins.Left = 5.000000000000000000
@@ -862,7 +703,7 @@ object frmCadCli: TfrmCadCli
               TextSettings.WordWrap = False
               Text = 'N'#186':'
             end
-            object edtNum: TEdit
+            object edtLNum: TEdit
               Touch.InteractiveGestures = [LongTap, DoubleTap]
               Align = Left
               TabOrder = 0
@@ -874,16 +715,16 @@ object frmCadCli: TfrmCadCli
               Size.PlatformDefault = False
             end
           end
-          object lbiAddEnd: TListBoxItem
+          object lbiLAddEnd: TListBoxItem
             Selectable = False
             Margins.Top = 3.000000000000000000
             Margins.Bottom = 2.000000000000000000
-            Position.Y = 658.000000000000000000
+            Position.Y = 568.000000000000000000
             Size.Width = 784.000000000000000000
             Size.Height = 50.000000000000000000
             Size.PlatformDefault = False
-            TabOrder = 21
-            object cbAddEnd: TCornerButton
+            TabOrder = 17
+            object cbLAddEnd: TCornerButton
               Align = Right
               Margins.Left = 2.000000000000000000
               Margins.Top = 2.000000000000000000

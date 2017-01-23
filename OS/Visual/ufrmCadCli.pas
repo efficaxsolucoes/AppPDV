@@ -28,8 +28,8 @@ type
     lbiRgInsc: TListBoxItem;
     lbiOgUf: TListBoxItem;
     lbiNasc: TListBoxItem;
-    lbFis: TLabel;
-    swtPesFis: TSwitch;
+    lbPJur: TLabel;
+    swtPesJur: TSwitch;
     lbNoRazSoc: TLabel;
     edtNoRazSoc: TEdit;
     lbApeNomFant: TLabel;
@@ -88,9 +88,9 @@ type
     cbSalvar: TCornerButton;
     cbVoltar: TCornerButton;
     cbApagar: TCornerButton;
-    procedure swtPesFisSwitch(Sender: TObject);
     procedure cbEditarClick(Sender: TObject);
     procedure cbVoltarClick(Sender: TObject);
+    procedure swtPesJurSwitch(Sender: TObject);
   private
     { Private declarations }
   public
@@ -103,6 +103,9 @@ var
 implementation
 
 {$R *.fmx}
+
+uses UPrinc;
+
 procedure TfrmCadCli.cbEditarClick(Sender: TObject);
 begin
  cbVoltar.Visible := True;
@@ -117,38 +120,10 @@ begin
   tbCadCli.Previous();
 end;
 
-procedure TfrmCadCli.swtPesFisSwitch(Sender: TObject);
-var
-i : boolean;
+procedure TfrmCadCli.swtPesJurSwitch(Sender: TObject);
 begin
-i := (swtPesFis.IsChecked = True);
-if i then
-        begin
-            lbCpCn.Text := 'CPF:';
-            lbNoRazSoc.Text := 'Nome:';
-            lbApeNomFant.Text := 'Apelido:';
-            lbRgInsc.Text := 'RG:';
-
-            lbiNasc.Visible := true;
-            lbiOgUf.Visible := true;
-
-            lbiNome.Visible := false;
-            lbiRec.Visible := true;
-        end
-      else
-        begin
-            lbCpCn.Text := 'CNPJ:';
-            lbNoRazSoc.Text := 'Razão Social:';
-            lbApeNomFant.Text := 'Nome Fantasia:';
-            lbRgInsc.Text := 'Inscrição Estadual:';
-
-            lbiNasc.Visible := false;
-            lbiOgUf.Visible := false;
-
-            lbiNome.Visible := true;
-            lbiRec.Visible := false;
-        end;
-
+  UPrinc.PJur(swtPesJur, lbCpCn, lbNoRazSoc, lbApeNomFant, lbRgInsc,
+              lbiOgUf, lbiNasc, lbiNome, lbiRec);
 end;
 
 end.

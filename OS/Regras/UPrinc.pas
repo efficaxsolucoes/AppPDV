@@ -5,11 +5,14 @@ interface
 uses
   System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
   FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs,
-  FMX.Controls.Presentation, FMX.StdCtrls, FMX.Menus, FMX.Layouts, frmNDefOS,
-  frmCadTec, frmCadUser, frmLogin, ufrmMenu, frmHist, frmNDuvOS;
+  FMX.Controls.Presentation, FMX.StdCtrls, FMX.Menus, FMX.Layouts,
+  ufrmMenu, frmHist, frmNDuvOS, FMX.ListBox, ufrmCadCli, ufrmCadFunc,
+  ufrmCadParc;
 
 
   Procedure AbreForm(AFormClass: TComponentClass);
+  procedure PJur (swt : TSwitch; lb01, lb02, lb03, lb04 : TLabel;
+                  lbi01, lbi02, lbi03, lbi04 : TListBoxItem);
 
   var
   FActiveForm : TForm;
@@ -44,6 +47,34 @@ begin
     frmMain.tlbMain.Visible := False;
     frmMain.lbghInicio.Visible := True;
   end;
+
+procedure PJur (swt : TSwitch; lb01, lb02, lb03, lb04 : TLabel ;
+                lbi01, lbi02, lbi03, lbi04 : TListBoxItem);
+var
+i : boolean;
+begin
+i := (swt.IsChecked = True);
+if i then
+        begin
+            lb01.Text := 'CNPJ:';
+            lb02.Text := 'Razão Social:';
+            lb03.Text := 'Nome Fantasia:';
+            lb04.Text := 'Inscrição Estadual:';
+        end
+      else
+        begin
+            lb01.Text := 'CPF:';
+            lb02.Text := 'Nome:';
+            lb03.Text := 'Apelido:';
+            lb04.Text := 'RG:';
+        end;
+
+  lbi01.Visible := not lbi01.Visible;
+  lbi02.Visible := not lbi02.Visible;
+  lbi03.Visible := not lbi03.Visible;
+  lbi04.Visible := not lbi04.Visible;
+end;
+
 
 
 

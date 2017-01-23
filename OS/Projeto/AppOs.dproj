@@ -320,16 +320,17 @@
             <Form>frmMain</Form>
             <FormType>fmx</FormType>
         </DCCReference>
-        <DCCReference Include="..\Visual\frmCadTec.pas">
-            <Form>CadTec</Form>
+        <DCCReference Include="..\Visual\ufrmCadFunc.pas">
+            <Form>frmCadFunc</Form>
             <FormType>fmx</FormType>
         </DCCReference>
-        <DCCReference Include="..\Visual\frmCadUser.pas">
-            <Form>CadUser</Form>
+        <DCCReference Include="..\Visual\ufrmCadParc.pas">
+            <Form>frmCadParc</Form>
             <FormType>fmx</FormType>
         </DCCReference>
         <DCCReference Include="..\Regras\UPrinc.pas"/>
-        <DCCReference Include="..\Visual\frmNDefOS.pas">
+        <DCCReference Include="..\Visual\ufrmCadLoj.pas">
+            <Form>frmCadLoj</Form>
             <FormType>fmx</FormType>
         </DCCReference>
         <DCCReference Include="..\Visual\frmNDuvOS.pas">
@@ -339,8 +340,8 @@
         <DCCReference Include="..\Visual\frmHist.pas">
             <FormType>fmx</FormType>
         </DCCReference>
-        <DCCReference Include="..\Visual\frmLogin.pas">
-            <Form>login</Form>
+        <DCCReference Include="..\Visual\ufrmCadProd.pas">
+            <Form>frmCadProd</Form>
             <FormType>fmx</FormType>
         </DCCReference>
         <BuildConfiguration Include="Release">

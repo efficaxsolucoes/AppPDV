@@ -5,7 +5,8 @@ interface
 uses
   System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
   FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.StdCtrls,
-  FMX.Layouts, FMX.Controls.Presentation, FMX.ListBox, FMX.MultiView, ufrmCadCli;
+  FMX.Layouts, FMX.Controls.Presentation, FMX.ListBox, FMX.MultiView, ufrmCadCli,
+  ufrmCadFunc, ufrmCadParc, ufrmCadProd, ufrmCadLoj;
 
 type
   TfrmMain = class(TForm)
@@ -16,10 +17,10 @@ type
     lbMainMenu: TListBox;
     lbghCadastro: TListBoxGroupHeader;
     lbiCliente: TListBoxItem;
-    Técnico: TListBoxItem;
+    lbiFuncionario: TListBoxItem;
     Loja: TListBoxItem;
-    Parceiro: TListBoxItem;
-    lbiUsuario: TListBoxItem;
+    lbiParceiro: TListBoxItem;
+    lbiProduto: TListBoxItem;
     lbghAtendimento: TListBoxGroupHeader;
     lbiNovo: TListBoxItem;
     lbiAbertos: TListBoxItem;
@@ -30,6 +31,10 @@ type
     lbiSair: TListBoxItem;
     lbghInicio: TListBoxGroupHeader;
     procedure lbiClienteClick(Sender: TObject);
+    procedure lbiFuncionarioClick(Sender: TObject);
+    procedure lbiParceiroClick(Sender: TObject);
+    procedure lbiProdutoClick(Sender: TObject);
+    procedure LojaClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -48,6 +53,26 @@ uses UPrinc;
 procedure TfrmMain.lbiClienteClick(Sender: TObject);
 begin
   UPrinc.AbreForm(TfrmCadCli);
+end;
+
+procedure TfrmMain.lbiFuncionarioClick(Sender: TObject);
+begin
+ UPrinc.AbreForm(TfrmCadFunc);
+end;
+
+procedure TfrmMain.lbiParceiroClick(Sender: TObject);
+begin
+ UPrinc.AbreForm(TfrmCadParc);
+end;
+
+procedure TfrmMain.lbiProdutoClick(Sender: TObject);
+begin
+  UPrinc.AbreForm(TfrmCadProd);
+end;
+
+procedure TfrmMain.LojaClick(Sender: TObject);
+begin
+ UPrinc.AbreForm(TFrmCadLoj);
 end;
 
 end.

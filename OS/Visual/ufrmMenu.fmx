@@ -2,8 +2,8 @@
   Left = 0
   Top = 0
   Caption = 'Form1'
-  ClientHeight = 520
-  ClientWidth = 789
+  ClientHeight = 600
+  ClientWidth = 800
   Position = DesktopCenter
   FormFactor.Width = 320
   FormFactor.Height = 480
@@ -11,12 +11,12 @@
   DesignerMasterStyle = 0
   object lytMain: TLayout
     Align = Client
-    Size.Width = 789.000000000000000000
-    Size.Height = 520.000000000000000000
+    Size.Width = 800.000000000000000000
+    Size.Height = 600.000000000000000000
     Size.PlatformDefault = False
     TabOrder = 0
     object tlbMain: TToolBar
-      Size.Width = 789.000000000000000000
+      Size.Width = 800.000000000000000000
       Size.Height = 40.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 0
@@ -34,13 +34,13 @@
     MasterButton = spbBack
     Mode = Drawer
     Size.Width = 250.000000000000000000
-    Size.Height = 520.000000000000000000
+    Size.Height = 600.000000000000000000
     Size.PlatformDefault = False
     TabOrder = 1
     object lbMainMenu: TListBox
       Align = Client
       Size.Width = 249.000000000000000000
-      Size.Height = 520.000000000000000000
+      Size.Height = 600.000000000000000000
       Size.PlatformDefault = False
       StyleLookup = 'transparentlistboxstyle'
       TabOrder = 0
@@ -49,7 +49,7 @@
       DefaultItemStyles.GroupHeaderStyle = ''
       DefaultItemStyles.GroupFooterStyle = ''
       Viewport.Width = 249.000000000000000000
-      Viewport.Height = 520.000000000000000000
+      Viewport.Height = 600.000000000000000000
       object lbghInicio: TListBoxGroupHeader
         TabOrder = 14
         Text = 'In'#237'cio'
@@ -68,25 +68,29 @@
         Text = 'Cliente'
         OnClick = lbiClienteClick
       end
-      object Técnico: TListBoxItem
+      object lbiFuncionario: TListBoxItem
         Position.Y = 44.000000000000000000
         TabOrder = 2
-        Text = 'T'#233'cnico'
+        Text = 'Funcion'#225'rio'
+        OnClick = lbiFuncionarioClick
       end
       object Loja: TListBoxItem
         Position.Y = 63.000000000000000000
         TabOrder = 3
         Text = 'Loja'
+        OnClick = LojaClick
       end
-      object Parceiro: TListBoxItem
+      object lbiParceiro: TListBoxItem
         Position.Y = 82.000000000000000000
         TabOrder = 4
         Text = 'Parceiro'
+        OnClick = lbiParceiroClick
       end
-      object lbiUsuario: TListBoxItem
+      object lbiProduto: TListBoxItem
         Position.Y = 101.000000000000000000
         TabOrder = 5
-        Text = 'Usu'#225'rio '
+        Text = 'Produto'
+        OnClick = lbiProdutoClick
       end
       object lbghAtendimento: TListBoxGroupHeader
         Position.Y = 120.000000000000000000
