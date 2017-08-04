@@ -36,10 +36,11 @@
     Size.Width = 250.000000000000000000
     Size.Height = 600.000000000000000000
     Size.PlatformDefault = False
+    Visible = False
     TabOrder = 1
     object lbMainMenu: TListBox
       Align = Client
-      Size.Width = 249.000000000000000000
+      Size.Width = 250.000000000000000000
       Size.Height = 600.000000000000000000
       Size.PlatformDefault = False
       StyleLookup = 'transparentlistboxstyle'
@@ -48,7 +49,7 @@
       DefaultItemStyles.ItemStyle = ''
       DefaultItemStyles.GroupHeaderStyle = ''
       DefaultItemStyles.GroupFooterStyle = ''
-      Viewport.Width = 249.000000000000000000
+      Viewport.Width = 250.000000000000000000
       Viewport.Height = 600.000000000000000000
       object lbghInicio: TListBoxGroupHeader
         TabOrder = 14
@@ -56,7 +57,7 @@
         Visible = False
       end
       object lbghCadastro: TListBoxGroupHeader
-        Size.Width = 249.000000000000000000
+        Size.Width = 250.000000000000000000
         Size.Height = 25.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 0
@@ -94,7 +95,7 @@
       end
       object lbghAtendimento: TListBoxGroupHeader
         Position.Y = 120.000000000000000000
-        Size.Width = 249.000000000000000000
+        Size.Width = 250.000000000000000000
         Size.Height = 25.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 6
@@ -114,7 +115,7 @@
       end
       object Relatórios: TListBoxGroupHeader
         Position.Y = 183.000000000000000000
-        Size.Width = 249.000000000000000000
+        Size.Width = 250.000000000000000000
         Size.Height = 25.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 9
@@ -141,5 +142,11 @@
         Text = 'Sair'
       end
     end
+  end
+  object Label1: TLabel
+    Position.X = 344.000000000000000000
+    Position.Y = 296.000000000000000000
+    Text = 'Teste'
+    TabOrder = 3
   end
 end

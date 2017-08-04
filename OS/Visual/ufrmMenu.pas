@@ -30,6 +30,7 @@ type
     lbiTrocUser: TListBoxItem;
     lbiSair: TListBoxItem;
     lbghInicio: TListBoxGroupHeader;
+    Label1: TLabel;
     procedure lbiClienteClick(Sender: TObject);
     procedure lbiFuncionarioClick(Sender: TObject);
     procedure lbiParceiroClick(Sender: TObject);
