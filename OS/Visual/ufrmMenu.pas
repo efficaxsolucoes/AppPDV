@@ -29,7 +29,6 @@ type
     Preferências: TListBoxItem;
     lbiTrocUser: TListBoxItem;
     lbghInicio: TListBoxGroupHeader;
-    Panel1: TPanel;
     procedure lbiClienteClick(Sender: TObject);
     procedure lbiFuncionarioClick(Sender: TObject);
     procedure lbiParceiroClick(Sender: TObject);
