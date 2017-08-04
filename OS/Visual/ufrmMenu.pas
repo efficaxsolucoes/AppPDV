@@ -28,9 +28,8 @@ type
     Sistema: TListBoxGroupHeader;
     Preferências: TListBoxItem;
     lbiTrocUser: TListBoxItem;
-    lbiSair: TListBoxItem;
     lbghInicio: TListBoxGroupHeader;
-    Label1: TLabel;
+    Panel1: TPanel;
     procedure lbiClienteClick(Sender: TObject);
     procedure lbiFuncionarioClick(Sender: TObject);
     procedure lbiParceiroClick(Sender: TObject);
